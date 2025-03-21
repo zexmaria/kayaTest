@@ -1,0 +1,16 @@
+# Ambiente virtual
+.venv/
+
+# Compilados Python
+__pycache__/
+*.py[cod]
+
+# Banco de dados local
+db.sqlite3
+
+# Node.js
+node_modules/
+package-lock.json
+
+# Tailwind CSS gerado
+core/static/css/output.css

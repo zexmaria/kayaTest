@@ -1,0 +1,146 @@
+{% extends "base.html" %}
+
+{% block title %}Encontre seu especialista em cannabis medicinal{% endblock title %}
+
+{% block content %}
+{% load static %}
+ <!-- Navbar -->
+ <nav class="fixed z-50 flex justify-center w-full top-8">
+  <div class="flex items-center w-full max-w-screen-xl p-4 bg-[#232323]
+              mx-2.5 sm:mx-4 md:mx-8 lg:mx-16 xl:mx-24
+              px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16
+              rounded-3xl">
+
+    <!-- LOGO -->
+    <img src="{% static '/kaya_doc_branco.png' %}" class="h-12 mr-3" alt="kaya logo">
+
+
+    <!-- Funcionalidades -->
+    <ul class="flex items-center ml-9 font-medium text-white ">
+      <li class="relative">
+        <button class="flex items-center px-3 py-2 text-white hover:text-blue-500 focus:outline-none">
+          Funcionalidades
+        </button>
+      </li>
+    </ul>
+
+
+       <!-- Paciente -->
+    <ul class="flex items-center ml-6 font-medium text-white">
+      <li class="relative">
+        <button class="flex items-center px-3 py-2 text-white hover:text-blue-500 focus:outline-none">
+          Paciente
+        </button>
+      </li>
+    </ul>
+
+<!-- Left buttons -->
+     <div class="hidden space-x-4 ms-auto md:flex">
+      <a href="#"
+         class="items-center justify-center hidden px-12 py-1 text-lg text-white border
+         rounded-3xl md:flex border-theme_color2-100 hover:bg-theme_color-verdeKaya hover:text-verdeKaya">
+        Teste grátis
+      </a>
+      <a href="#"
+         class="items-center justify-center hidden px-12 py-1 text-lg text-white border
+         rounded-3xl md:flex border-theme_color2-100 hover:bg-theme_color2-100 hover:text-theme_color2-600">
+        Login
+      </a>
+    </div>
+  </div>
+</nav>
+
+
+<!-- Frases -->
+<h2 class="mb-4 text-2xl font-bold md:text-4xl lg:text-5xl text-verdeKaya
+    text-center mt-48 font-marvinVisions">
+    Encontre seu especialista em cannabis medicinal
+</h2>
+<p class=" text-center font-semibold mb-7 md:text-xl">
+    Busque por especialidade, pelo nome do profissional da saúde ou utilize umas das palavras-chave abaixo.
+</p>
+
+
+<!-- ESPECIALIDADES -->
+
+<div class="flex flex-wrap justify-center gap-2 mt-8">
+  <button class="bg-[#CDEA98] hover:bg-[#A7C879] px-4 py-2 rounded-full font-bold text-sm">
+    TODAS
+  </button>
+
+  <button class="bg-[#CDEA98] hover:bg-[#A7C879] px-4 py-2 rounded-full font-bold text-sm">
+    CLÍNICO GERAL
+  </button>
+
+  <button class="bg-[#CDEA98] hover:bg-[#A7C879] px-4 py-2 rounded-full font-bold text-sm">
+    MEDICINA PREVENTIVA E SOCIAL
+  </button>
+
+    <button class="bg-[#CDEA98] hover:bg-[#A7C879] px-4 py-2 rounded-full font-bold text-sm">
+    MEDICINA DO TRABALHO
+  </button>
+</div>
+
+<div class="flex flex-wrap justify-center gap-2 mt-8">
+    <button class="bg-[#CDEA98] hover:bg-[#A7C879] px-4 py-2 rounded-full font-bold text-sm">
+        MEDICINA DE FAMÍLIA E COMUNIDADE - RQE Nº: 21312
+    </button>
+
+     <button class="bg-[#CDEA98] hover:bg-[#A7C879] px-4 py-2 rounded-full font-bold text-sm">
+            MEDICINA PREVENTIVA E SOCIAL - RQE Nº: 39217
+    </button>
+
+    <button class="bg-[#CDEA98] hover:bg-[#A7C879] px-4 py-2 rounded-full font-bold text-sm">
+            MEDICINA INTEGRATIVA
+    </button>
+</div>
+
+<div class="flex flex-wrap justify-center gap-2 mt-8">
+    <button class="bg-[#CDEA98] hover:bg-[#A7C879] px-4 py-2 rounded-full font-bold text-sm">
+            PÓS GRADUAÇÃO EM PSIQUIATRIA / MEDICINA CANABINÓIDE
+    </button>
+
+    <button class="bg-[#CDEA98] hover:bg-[#A7C879] px-4 py-2 rounded-full font-bold text-sm">
+            DENTISTA
+    </button>
+
+    <button class="bg-[#CDEA98] hover:bg-[#A7C879] px-4 py-2 rounded-full font-bold text-sm">
+        MEDICINA DE FAMÍLIA E COMUNIDADE - RQE Nº: 6198
+    </button>
+</div>
+
+<div class="flex flex-wrap justify-center gap-2 mt-8">
+     <button class="bg-[#CDEA98] hover:bg-[#A7C879] px-4 py-2 rounded-full font-bold text-sm">
+        GENERALISTA | MEDICINA CANABINÓIDE
+     </button>
+
+    <button class="bg-[#CDEA98] hover:bg-[#A7C879] px-4 py-2 rounded-full font-bold text-sm">
+        MEDICINA FUNCIONAL INTEGRATIVA
+    </button>
+
+    <button class="bg-[#CDEA98] hover:bg-[#A7C879] px-4 py-2 rounded-full font-bold text-sm">
+        NONE
+     </button>
+
+    <button class="bg-[#CDEA98] hover:bg-[#A7C879] px-4 py-2 rounded-full font-bold text-sm">
+        MEDICINA DE FAMÍLIA E COMUNIDADE
+    </button>
+</div>
+
+
+<!-- BARRA DE PESQUISA -->
+
+<div class="w-full max-w-screen-xl mx-auto px-4 md:px-8">
+    <div class="flex flex-wrap justify-center gap-2 mt-8">
+        <input placeholder="Pesquisar " type="text" id="" name="" value="" class="w-5/6 text-sm text-gray-900 bg-gray-50 border-0
+               rounded-lg drop-shadow-xl md:py-5 md:px-12 md:rounded-full ps-10">
+    </div>
+
+    <div class="mb-8 font-bold ml-10 mt-6 pl-12 md:pl-12 text-verdeKaya">
+        Total de 22 prescritores
+      </div>
+    <div class="ml-20 flex gap-6 mb-5 text-gray-500">
+            <div class="text-xl font-bold">Filtros</div>
+    </div>
+</div>
+{% endblock content %}

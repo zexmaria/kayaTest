@@ -1,0 +1,904 @@
+(.venv) zemaria@zemaria:~/Documents/Testes/kaya_test$
+npx tailwindcss -i ./core/static/css/input.css -o ./core/static/css/output.css --watch
+
+
+
+{% extends "base.html" %}
+
+{% block title %}Home{% endblock title %}
+
+{% block content %}
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Encontre seu especialista em cannabis medicinal. Busque por especialidade, pelo nome do profissional da saúde ou utilize palavras-chave.">
+    <meta name="keywords" content="cannabis medicinal, especialistas, saúde, médicos, consultas, agendamento">
+    <meta name="author" content="kayadoc">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>
+
+    Encontre seu especialista em cannabis medicinal
+
+        </title>
+        <link rel="stylesheet" href="https://saude-kayamind-minio.aqrour.easypanel.host/kayadoc/staticfiles/CACHE/css/output.c1bb47960a46.css?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=tEE1iyojY34tOfrnfIPQ%2F20250319%2Fbrazil%2Fs3%2Faws4_request&X-Amz-Date=20250319T185709Z&X-Amz-Expires=588000&X-Amz-SignedHeaders=host&X-Amz-Signature=147e777ffef463b30b9b8add2a8f167ff37c1c138177b6775ba8470c44277e4e" type="text/css">
+        <link rel="shortcut icon"
+              href="https://saude-kayamind-minio.aqrour.easypanel.host/kayadoc/staticfiles/favicon.ico?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=tEE1iyojY34tOfrnfIPQ%2F20250319%2Fbrazil%2Fs3%2Faws4_request&amp;X-Amz-Date=20250319T185709Z&amp;X-Amz-Expires=588000&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Signature=00761875b7c5a87c992578d3e2b9b8ef2a4ebb8b3b7b43aa6f9984c2a6a9f793"
+              type="image/x-icon">
+        <link rel="stylesheet" href="https://use.typekit.net/dhp7kda.css">
+        <link rel="stylesheet"
+              href="https://saude-kayamind-minio.aqrour.easypanel.host/kayadoc/staticfiles/fonts/Marvin%20Visions/Variable/stylesheet.css?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=tEE1iyojY34tOfrnfIPQ%2F20250319%2Fbrazil%2Fs3%2Faws4_request&amp;X-Amz-Date=20250319T185709Z&amp;X-Amz-Expires=588000&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Signature=f482ab6af19042378197998c2e6b43ba07d6c659269ad09f7c928f000eeb4ad2">
+        <link rel="stylesheet"
+              href="https://saude-kayamind-minio.aqrour.easypanel.host/kayadoc/staticfiles/src/fontawesome/css/all.min.css?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=tEE1iyojY34tOfrnfIPQ%2F20250319%2Fbrazil%2Fs3%2Faws4_request&amp;X-Amz-Date=20250319T185709Z&amp;X-Amz-Expires=588000&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Signature=eca553837b3d01e725655ef63af76299403fcf2eb3016f03c6f2d7e2fab31b56">
+
+
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script
+            src="https://js.sentry-cdn.com/7a10ad36698ff9f2d1c4696c311aceb9.min.js"></script>
+        <style>
+            body {
+                font-family: din-2014, sans-serif;
+            }
+        </style>
+        <script>
+            // Chatwoot não logado
+            (function(d,t) {
+                var BASE_URL="https://chatwoot.kayadoc.com";
+                var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+                g.src=BASE_URL+"/packs/js/sdk.js";
+                g.defer = true;
+                g.async = true;
+                s.parentNode.insertBefore(g,s);
+                g.onload=function(){
+                    window.chatwootSDK.run({
+                        websiteToken: 'DNRADRk8YkADSPe51vT8yJZm',
+                        baseUrl: BASE_URL
+                    })
+
+                }
+            })(document,"script");
+        </script>
+
+        <!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-W1Y3Q2ZS1K"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'G-W1Y3Q2ZS1K');
+        </script>
+
+        <!-- Google Tag Manager -->
+        <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+            })(window,document,'script','dataLayer','GTM-599JSZWV');</script>
+        <!-- End Google Tag Manager -->
+    </head>
+    <body class="overflow-x-hidden"
+          hx-headers='{"X-CSRFToken": "V9UyNf81bFnJwod9sq5rUj46NNqA5w2mnWeh4QVy88wtkF17NJn7SoeK25jXpNr6"}'>
+
+<nav class="fixed z-50 flex justify-center w-full top-8">
+  <div class="flex flex-wrap items-center w-full max-w-screen-xl p-4 bg-[#232323] mx-2.5 rounded-3xl md:mx-8 md:px-8">
+    <a class="flex items-center space-x-3 rtl:space-x-reverse me-20"
+       href="/">
+      <img src="https://saude-kayamind-minio.aqrour.easypanel.host/kayadoc/staticfiles/images/rebranding/kaya%20doc%20branco.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=tEE1iyojY34tOfrnfIPQ%2F20250319%2Fbrazil%2Fs3%2Faws4_request&amp;X-Amz-Date=20250319T185709Z&amp;X-Amz-Expires=588000&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Signature=c2ac343b871639e3992539cea8f8dd6d1e7e323cedbe9063b6ddd6576e32ac60"
+           class="h-12"
+           alt="Kaya doc verde" />
+    </a>
+
+    <button data-collapse-toggle="navbar-multi-level"
+            type="button"
+            class="flex items-center justify-center w-10 h-10 p-2 text-sm text-gray-500 rounded-lg ms-auto md:hidden hover:bg-theme_color2-500 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+            aria-controls="navbar-default"
+            aria-expanded="false">
+      <span class="sr-only">Open main menu</span>
+      <svg class="w-5 h-5"
+           aria-hidden="true"
+           xmlns="http://www.w3.org/2000/svg"
+           fill="none"
+           viewBox="0 0 17 14">
+        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15" />
+      </svg>
+    </button>
+    <div class="hidden w-full md:flex md:w-auto" id="navbar-multi-level">
+      <ul class="flex flex-col p-4 mt-4 font-medium text-white border border-gray-100 rounded-lg md:p-0 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0">
+        <li>
+          <button id="dropdownNavbarLink1"
+                  data-dropdown-toggle="dropdownNavbar1"
+                  class="flex items-center justify-between w-full px-3 py-2 text-white hover:bg-theme_color2-500 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:w-auto">
+            Funcionalidades
+            <i class="fas fa-caret-down ms-4"></i>
+          </button>
+          <!-- Dropdown menu -->
+          <div id="dropdownNavbar1"
+               class="z-10 hidden font-normal bg-[#232323] rounded-lg shadow-sm w-44">
+            <ul class="py-2 text-sm text-theme_color2-100"
+                aria-labelledby="dropdownLargeButton1">
+              <li>
+                <a href="/funcionalidades/descubra/" class="block px-4 py-2 hover:bg-theme_color2-500">Descubra Novos Produtos</a>
+              </li>
+              <li>
+                <a href="/funcionalidades/biblioteca/" class="block px-4 py-2 hover:bg-theme_color2-500">Biblioteca de Estudos</a>
+              </li>
+              <li>
+                <a href="/funcionalidades/webinars/" class="block px-4 py-2 hover:bg-theme_color2-500">Webinars</a>
+              </li>
+              <li>
+                <a href="/funcionalidades/" class="block px-4 py-2 hover:bg-theme_color2-500">Copiloto</a>
+              </li>
+              <li>
+                <a href="/funcionalidades/beneficios/" class="block px-4 py-2 hover:bg-theme_color2-500">Benefícios e Parcerias</a>
+              </li>
+              <li>
+                <a href="/funcionalidades/" class="block px-4 py-2 hover:bg-theme_color2-500">Prontuário</a>
+              </li>
+              <li>
+                <a href="/funcionalidades/" class="block px-4 py-2 hover:bg-theme_color2-500">Anamnese</a>
+              </li>
+              <li>
+                <a href="/funcionalidades/" class="block px-4 py-2 hover:bg-theme_color2-500">Agenda</a>
+              </li>
+              <li>
+                <a href="/funcionalidades/" class="block px-4 py-2 hover:bg-theme_color2-500">Perfil Público</a>
+              </li>
+            </ul>
+          </div>
+        </li>
+        <li class="hidden">
+          <a href="/"
+             class="flex items-center justify-between w-full px-3 py-2 text-white hover:bg-theme_color2-500 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:w-auto">
+            Sobre
+          </a>
+        </li>
+
+        <li>
+          <button id="dropdownNavbarLink2"
+                  data-dropdown-toggle="dropdownNavbar2"
+                  class="flex items-center justify-between w-full px-3 py-2 text-white hover:bg-theme_color2-500 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:w-auto">
+            Paciente
+            <i class="fas fa-caret-down ms-4"></i>
+          </button>
+          <!-- Dropdown menu -->
+          <div id="dropdownNavbar2"
+               class="z-10 hidden font-normal bg-[#232323] rounded-lg shadow-sm w-44">
+            <ul class="py-2 text-sm text-theme_color2-100"
+                aria-labelledby="dropdownLargeButton2">
+              <li>
+                <a href="/medicos/" class="block px-4 py-2 hover:bg-theme_color2-500">Médicos Prescritores</a>
+              </li>
+              <li>
+                <a href="/beneficios_lista/" class="block px-4 py-2 hover:bg-theme_color2-500">Benefícios da Cannabis</a>
+              </li>
+              <li>
+                <a href="/glossario_lista/" class="block px-4 py-2 hover:bg-theme_color2-500">Glossário Canábico</a>
+              </li>
+              <li>
+                <a href="https://kayamind.com/" class="block px-4 py-2 hover:bg-theme_color2-500">Blog da Saúde</a>
+              </li>
+              <li>
+                <a href="/beneficios_lista/" class="block px-4 py-2 hover:bg-theme_color2-500">Condições Médicas</a>
+              </li>
+            </ul>
+          </div>
+        </li>
+        <li class="flex py-2">
+          <a href="/cadastro_medico_form/"
+            class="items-center justify-center px-12 py-1 text-lg border md:hidden text-theme_color2-600 bg-theme_color2-100 rounded-3xl border-theme_color2-100 hover:bg-theme_color2-600 hover:text-theme_color2-100">
+            Teste gratis
+          </a>
+        </li>
+        <li class="flex py-2">
+          <a href="/usuario/entrar/"
+            class="items-center justify-center px-12 py-1 text-lg text-white border md:hidden rounded-3xl border-theme_color2-100 hover:bg-theme_color2-100 hover:text-theme_color2-600">
+            Login
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div class="hidden space-x-4 ms-auto md:flex">
+      <a href="/cadastro_medico_form/"
+         class="items-center justify-center hidden px-12 py-1 text-lg border md:flex text-theme_color2-600 bg-theme_color2-100 rounded-3xl border-theme_color2-100 hover:bg-theme_color2-600 hover:text-theme_color2-100">
+        Teste gratis
+      </a>
+      <a href="/usuario/entrar/"
+         class="items-center justify-center hidden px-12 py-1 text-lg text-white border rounded-3xl md:flex border-theme_color2-100 hover:bg-theme_color2-100 hover:text-theme_color2-600">
+        Login
+      </a>
+    </div>
+  </div>
+</nav>
+<script>
+  window.addEventListener('scroll', function() {
+    const navbar = document.querySelector('nav');
+    if (window.scrollY > 0) {
+      navbar.classList.add('opacity-70');
+    } else {
+      navbar.classList.remove('opacity-70');
+    }
+  });
+
+  document.querySelector('nav').addEventListener('click', function() {
+    this.classList.remove('opacity-70');
+  });
+
+  document.addEventListener('click', function(event) {
+    const navbar = document.querySelector('nav');
+    if (!navbar.contains(event.target)) {
+      navbar.classList.add('opacity-70');
+    }
+  });
+</script>
+
+
+    <main class="mt-32">
+        <section class="mb-16 xl:mx-12 xl:mb-32" id="medics_sect">
+            <div class="max-w-screen-xl mx-auto pt-7 xl:pt-16 xl:px-6">
+                <div class="mb-6 text-center">
+                    <div class="mx-4">
+                        <h2 class="mb-4 text-2xl font-bold md:text-3xl lg:text-5xl text-theme_color2-400" style="font-family: Marvin Visions Variable;">Encontre seu especialista em cannabis medicinal</h2>
+                        <p class="font-semibold mb-7 md:text-2xl">
+                            Busque por especialidade, pelo nome do profissional da saúde ou utilize umas das palavras-chave abaixo.
+                        </p>
+                    </div>
+                    <div class="mx-auto mb-6 md:max-w-screen-xl md:mx-12">
+                        <form action="/medicos/" onchange="this.submit()">
+                            <div class="flex flex-wrap justify-center gap-6 mb-8">
+                                <div class="flex gap-6">
+                                    <input type="radio" name="specialty" id="specialty-all" value="all" class="hidden peer" >
+                                    <label for="specialty-all" class="px-10 py-1 text-xs font-bold uppercase rounded-lg cursor-pointer bg-theme_color2-200 peer-checked:bg-theme_color2-300 hover:bg-theme_color2-300">
+                                        TODAS
+                                    </label>
+                                </div>
+
+                                    <div>
+                                        <input type="radio" name="specialty" id="specialty-1" value="MEDICINA DE FAMÍLIA E COMUNIDADE - RQE Nº: 6198 " class="hidden peer" >
+                                        <label for="specialty-1" class="px-10 py-1 text-xs font-bold uppercase rounded-lg cursor-pointer bg-theme_color2-200 peer-checked:bg-theme_color2-300 hover:bg-theme_color2-300">MEDICINA DE FAMÍLIA E COMUNIDADE - RQE Nº: 6198 </label>
+                                    </div>
+
+                                    <div>
+                                        <input type="radio" name="specialty" id="specialty-2" value="Medicina de Família e Comunidade" class="hidden peer" >
+                                        <label for="specialty-2" class="px-10 py-1 text-xs font-bold uppercase rounded-lg cursor-pointer bg-theme_color2-200 peer-checked:bg-theme_color2-300 hover:bg-theme_color2-300">Medicina de Família e Comunidade</label>
+                                    </div>
+
+                                    <div>
+                                        <input type="radio" name="specialty" id="specialty-3" value="Medicina Funcional Integrativa " class="hidden peer" >
+                                        <label for="specialty-3" class="px-10 py-1 text-xs font-bold uppercase rounded-lg cursor-pointer bg-theme_color2-200 peer-checked:bg-theme_color2-300 hover:bg-theme_color2-300">Medicina Funcional Integrativa </label>
+                                    </div>
+
+                                    <div>
+                                        <input type="radio" name="specialty" id="specialty-4" value="Medicina Integrativa" class="hidden peer" >
+                                        <label for="specialty-4" class="px-10 py-1 text-xs font-bold uppercase rounded-lg cursor-pointer bg-theme_color2-200 peer-checked:bg-theme_color2-300 hover:bg-theme_color2-300">Medicina Integrativa</label>
+                                    </div>
+
+                                    <div>
+                                        <input type="radio" name="specialty" id="specialty-5" value="Pós graduação em Psiquiatria / Medicina Canabinóide." class="hidden peer" >
+                                        <label for="specialty-5" class="px-10 py-1 text-xs font-bold uppercase rounded-lg cursor-pointer bg-theme_color2-200 peer-checked:bg-theme_color2-300 hover:bg-theme_color2-300">Pós graduação em Psiquiatria / Medicina Canabinóide.</label>
+                                    </div>
+
+                                    <div>
+                                        <input type="radio" name="specialty" id="specialty-6" value="Medicina Preventiva e Social" class="hidden peer" >
+                                        <label for="specialty-6" class="px-10 py-1 text-xs font-bold uppercase rounded-lg cursor-pointer bg-theme_color2-200 peer-checked:bg-theme_color2-300 hover:bg-theme_color2-300">Medicina Preventiva e Social</label>
+                                    </div>
+
+                                    <div>
+                                        <input type="radio" name="specialty" id="specialty-7" value="Generalista | Medicina Endocanabinóide" class="hidden peer" >
+                                        <label for="specialty-7" class="px-10 py-1 text-xs font-bold uppercase rounded-lg cursor-pointer bg-theme_color2-200 peer-checked:bg-theme_color2-300 hover:bg-theme_color2-300">Generalista | Medicina Endocanabinóide</label>
+                                    </div>
+
+                                    <div>
+                                        <input type="radio" name="specialty" id="specialty-8" value="MEDICINA DO TRABALHO" class="hidden peer" >
+                                        <label for="specialty-8" class="px-10 py-1 text-xs font-bold uppercase rounded-lg cursor-pointer bg-theme_color2-200 peer-checked:bg-theme_color2-300 hover:bg-theme_color2-300">MEDICINA DO TRABALHO</label>
+                                    </div>
+
+                                    <div>
+                                        <input type="radio" name="specialty" id="specialty-9" value="MEDICINA DE FAMÍLIA E COMUNIDADE - RQE Nº: 21312 " class="hidden peer" >
+                                        <label for="specialty-9" class="px-10 py-1 text-xs font-bold uppercase rounded-lg cursor-pointer bg-theme_color2-200 peer-checked:bg-theme_color2-300 hover:bg-theme_color2-300">MEDICINA DE FAMÍLIA E COMUNIDADE - RQE Nº: 21312 </label>
+                                    </div>
+
+                                    <div>
+                                        <input type="radio" name="specialty" id="specialty-10" value="MEDICINA PREVENTIVA E SOCIAL - RQE Nº: 39217" class="hidden peer" >
+                                        <label for="specialty-10" class="px-10 py-1 text-xs font-bold uppercase rounded-lg cursor-pointer bg-theme_color2-200 peer-checked:bg-theme_color2-300 hover:bg-theme_color2-300">MEDICINA PREVENTIVA E SOCIAL - RQE Nº: 39217</label>
+                                    </div>
+
+                                    <div>
+                                        <input type="radio" name="specialty" id="specialty-11" value="Dentista" class="hidden peer" >
+                                        <label for="specialty-11" class="px-10 py-1 text-xs font-bold uppercase rounded-lg cursor-pointer bg-theme_color2-200 peer-checked:bg-theme_color2-300 hover:bg-theme_color2-300">Dentista</label>
+                                    </div>
+
+                                    <div>
+                                        <input type="radio" name="specialty" id="specialty-12" value="None" class="hidden peer" >
+                                        <label for="specialty-12" class="px-10 py-1 text-xs font-bold uppercase rounded-lg cursor-pointer bg-theme_color2-200 peer-checked:bg-theme_color2-300 hover:bg-theme_color2-300">None</label>
+                                    </div>
+
+                                    <div>
+                                        <input type="radio" name="specialty" id="specialty-13" value="Clínico Geral" class="hidden peer" >
+                                        <label for="specialty-13" class="px-10 py-1 text-xs font-bold uppercase rounded-lg cursor-pointer bg-theme_color2-200 peer-checked:bg-theme_color2-300 hover:bg-theme_color2-300">Clínico Geral</label>
+                                    </div>
+
+                            </div>
+                            <div class="relative mb-4">
+                                <div class="absolute inset-y-0 flex items-center pointer-events-none start-0 ps-2 md:ps-6">
+                                    <i class="text-gray-500 fas fa-magnifying-glass"></i>
+                                </div>
+                                <input type="text"
+                                       id="medico"
+                                       name="medico"
+                                       value=""
+                                       class="block w-full text-sm text-gray-900 bg-gray-100 border-0 rounded-lg shadow-lg md:py-5 md:px-12 md:rounded-full ps-10 focus:ring-blue-500 focus:border-blue-500">
+
+                            </div>
+                            <div class="mb-8 font-bold text-start ms-10 text-theme_color2-300">Total de 22 prescritores</div>
+                            <div>
+                                <div class="flex gap-6 mb-5 text-gray-500">
+                                    <div class="text-xl font-bold">Filtros</div>
+                                    <div><i class="text-2xl fas fa-filter"></i></div>
+                                </div>
+                                <div class="flex gap-5">
+                                    <div>
+                                        <input type="radio" name="filter" id="filter-lowest-price" value="lowest_price" class="hidden peer" >
+                                        <label for="filter-lowest-price" class="px-4 py-1 text-xs font-bold text-gray-500 bg-gray-300 cursor-pointer rounded-xl peer-checked:text-theme_color2-400 peer-checked:bg-theme_color2-200">
+                                            MENOR VALOR
+                                        </label>
+                                    </div>
+
+                                    <div>
+                                        <input type="radio" name="filter" id="filter-highest-price" value="highest_price" class="hidden peer" >
+                                        <label for="filter-highest-price" class="px-4 py-1 text-xs font-bold text-gray-500 bg-gray-300 cursor-pointer rounded-xl peer-checked:text-theme_color2-400 peer-checked:bg-theme_color2-200">
+                                            MAIOR VALOR
+                                        </label>
+                                    </div>
+
+                                    <div>
+                                        <input type="radio" name="filter" id="filter-most_viewed" value="most_viewed" class="hidden peer" >
+                                        <label for="filter-most_viewed" class="px-4 py-1 text-xs font-bold text-gray-500 bg-gray-300 cursor-pointer rounded-xl peer-checked:text-theme_color2-400 peer-checked:bg-theme_color2-200">
+                                            VISUALIZAÇÕES
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+
+                    </div>
+                </div>
+                <div id="medic-list-container" data-order="">
+                    <div class="grid grid-cols-1 gap-6 pb-6 mx-6 overflow-x-auto md:mx-12 sm:grid-cols-2 md:grid-cols-3 xl:px-9 snap-x xl:gap-4 lg:mb-16 xl:max-w-screen-xl xl:mx-auto" id="medic_grid">
+
+                            <div class="flex flex-col items-center justify-between w-full mx-auto text-center rounded-lg bg-gray-100/50 snap-center">
+    <div class="flex flex-col w-full">
+        <a class="w-full mb-4 cursor-pointer" href="/medicos/23/perfil/">
+            <div class="w-full text-center avatar">
+                <div class="w-32 mx-auto sm:w-full">
+
+                        <img class="rounded-lg sm:rounded-none sm:rounded-l-lg" src="https://saude-kayamind-minio.aqrour.easypanel.host/kayadoc/media/medic_photos/Adriana.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=tEE1iyojY34tOfrnfIPQ%2F20250319%2Fbrazil%2Fs3%2Faws4_request&amp;X-Amz-Date=20250319T185709Z&amp;X-Amz-Expires=588000&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Signature=b394132461f8aadbb8a18ec9baa3b9752e15cf736e31ea178d975b4702b22b45" width="200" height="200" alt="Foto de perfil do Dra. Maria Adriana Cruz">
+
+                </div>
+            </div>
+        </a>
+        <div class="mb-6 text-center sm:px-5 xl:mb-5 sm:text-start">
+            <a class="cursor-pointer" href="/medicos/23/perfil/">
+                <h3 class="w-full text-lg font-bold cursor-pointer whitespace-nowrap">Maria Adriana Cruz</h3>
+            </a>
+            <span class="w-full text-sm italic text-gray-500">Medicina Integrativa</span>
+        </div>
+    </div>
+    <div class="flex flex-col w-full gap-3 mt-auto text-sm font-bold">
+        <div class="flex gap-2 mt-auto text-base sm:px-5">
+            <div>R$ 420,00</div>
+            <div>50 min</div>
+        </div>
+        <div class="flex flex-col gap-2 py-4 bg-white">
+
+                <a class="w-full py-2 text-white border rounded-lg md:text-xl bordmd-glaucous-500 bg-theme_color2-400" href="/medicos/23/agenda/">AGENDAR CONSULTA</a>
+                <a class="w-full py-1 text-xs rounded-lg md:text-sm text-theme_color2-400" href="/medicos/23/perfil/">VER MAIS</a>
+
+        </div>
+    </div>
+</div>
+
+                            <div class="flex flex-col items-center justify-between w-full mx-auto text-center rounded-lg bg-gray-100/50 snap-center">
+    <div class="flex flex-col w-full">
+        <a class="w-full mb-4 cursor-pointer" href="/medicos/4/perfil/">
+            <div class="w-full text-center avatar">
+                <div class="w-32 mx-auto sm:w-full">
+
+                        <img class="rounded-lg sm:rounded-none sm:rounded-l-lg" src="https://saude-kayamind-minio.aqrour.easypanel.host/kayadoc/media/medic_photos/bruno.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=tEE1iyojY34tOfrnfIPQ%2F20250319%2Fbrazil%2Fs3%2Faws4_request&amp;X-Amz-Date=20250319T185709Z&amp;X-Amz-Expires=588000&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Signature=2384c2ecadb8e12bf010ec41efb75a3442b0f9270edd397f9972792b678d7800" width="200" height="200" alt="Foto de perfil do Dr. Bruno Paladini">
+
+                </div>
+            </div>
+        </a>
+        <div class="mb-6 text-center sm:px-5 xl:mb-5 sm:text-start">
+            <a class="cursor-pointer" href="/medicos/4/perfil/">
+                <h3 class="w-full text-lg font-bold cursor-pointer whitespace-nowrap">Bruno Paladini</h3>
+            </a>
+            <span class="w-full text-sm italic text-gray-500">Medicina de Família e Comunidade</span>
+        </div>
+    </div>
+    <div class="flex flex-col w-full gap-3 mt-auto text-sm font-bold">
+        <div class="flex gap-2 mt-auto text-base sm:px-5">
+            <div>R$ 800,00</div>
+            <div>90 min</div>
+        </div>
+        <div class="flex flex-col gap-2 py-4 bg-white">
+
+                <a class="w-full py-2 text-white border rounded-lg md:text-xl bordmd-glaucous-500 bg-theme_color2-400" href="/medicos/4/agenda/">AGENDAR CONSULTA</a>
+                <a class="w-full py-1 text-xs rounded-lg md:text-sm text-theme_color2-400" href="/medicos/4/perfil/">VER MAIS</a>
+
+        </div>
+    </div>
+</div>
+
+                            <div class="flex flex-col items-center justify-between w-full mx-auto text-center rounded-lg bg-gray-100/50 snap-center">
+    <div class="flex flex-col w-full">
+        <a class="w-full mb-4 cursor-pointer" href="/medicos/6/perfil/">
+            <div class="w-full text-center avatar">
+                <div class="w-32 mx-auto sm:w-full">
+
+                        <img class="rounded-lg sm:rounded-none sm:rounded-l-lg" src="https://saude-kayamind-minio.aqrour.easypanel.host/kayadoc/media/medic_photos/Dra._Luisa_de_Freitas_Ramos.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=tEE1iyojY34tOfrnfIPQ%2F20250319%2Fbrazil%2Fs3%2Faws4_request&amp;X-Amz-Date=20250319T185709Z&amp;X-Amz-Expires=588000&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Signature=ec782d20c09d88f0f4d354da1c8c5941312dc6aaea43f14b3cd4ad6eeb12ea33" width="200" height="200" alt="Foto de perfil do Dra. Luisa de Freitas Ramos">
+
+                </div>
+            </div>
+        </a>
+        <div class="mb-6 text-center sm:px-5 xl:mb-5 sm:text-start">
+            <a class="cursor-pointer" href="/medicos/6/perfil/">
+                <h3 class="w-full text-lg font-bold cursor-pointer whitespace-nowrap">Luisa de Freitas Ramos</h3>
+            </a>
+            <span class="w-full text-sm italic text-gray-500">Medicina de Família e Comunidade</span>
+        </div>
+    </div>
+    <div class="flex flex-col w-full gap-3 mt-auto text-sm font-bold">
+        <div class="flex gap-2 mt-auto text-base sm:px-5">
+            <div>R$ 420,00</div>
+            <div>60 min</div>
+        </div>
+        <div class="flex flex-col gap-2 py-4 bg-white">
+
+                <a class="w-full py-2 text-white border rounded-lg md:text-xl bordmd-glaucous-500 bg-theme_color2-400" href="/medicos/6/agenda/">AGENDAR CONSULTA</a>
+                <a class="w-full py-1 text-xs rounded-lg md:text-sm text-theme_color2-400" href="/medicos/6/perfil/">VER MAIS</a>
+
+        </div>
+    </div>
+</div>
+
+                            <div class="flex flex-col items-center justify-between w-full mx-auto text-center rounded-lg bg-gray-100/50 snap-center">
+    <div class="flex flex-col w-full">
+        <a class="w-full mb-4 cursor-pointer" href="/medicos/10/perfil/">
+            <div class="w-full text-center avatar">
+                <div class="w-32 mx-auto sm:w-full">
+
+                        <img class="rounded-lg sm:rounded-none sm:rounded-l-lg" src="https://saude-kayamind-minio.aqrour.easypanel.host/kayadoc/media/medic_photos/Ricardo_Gurgel.jpeg?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=tEE1iyojY34tOfrnfIPQ%2F20250319%2Fbrazil%2Fs3%2Faws4_request&amp;X-Amz-Date=20250319T185709Z&amp;X-Amz-Expires=588000&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Signature=e41d4b0b9ddddd80ef07fb1b0500d625a8132316e62974a15b598ecd487c5974" width="200" height="200" alt="Foto de perfil do Dr. Ricardo Freire Gurgel">
+
+                </div>
+            </div>
+        </a>
+        <div class="mb-6 text-center sm:px-5 xl:mb-5 sm:text-start">
+            <a class="cursor-pointer" href="/medicos/10/perfil/">
+                <h3 class="w-full text-lg font-bold cursor-pointer whitespace-nowrap">Ricardo Freire Gurgel</h3>
+            </a>
+            <span class="w-full text-sm italic text-gray-500">Clínico Geral</span>
+        </div>
+    </div>
+    <div class="flex flex-col w-full gap-3 mt-auto text-sm font-bold">
+        <div class="flex gap-2 mt-auto text-base sm:px-5">
+            <div>R$ 500,00</div>
+            <div>30 min</div>
+        </div>
+        <div class="flex flex-col gap-2 py-4 bg-white">
+
+                <a class="w-full py-2 text-white border rounded-lg md:text-xl bordmd-glaucous-500 bg-theme_color2-400" href="/medicos/10/agenda/">AGENDAR CONSULTA</a>
+                <a class="w-full py-1 text-xs rounded-lg md:text-sm text-theme_color2-400" href="/medicos/10/perfil/">VER MAIS</a>
+
+        </div>
+    </div>
+</div>
+
+                            <div class="flex flex-col items-center justify-between w-full mx-auto text-center rounded-lg bg-gray-100/50 snap-center">
+    <div class="flex flex-col w-full">
+        <a class="w-full mb-4 cursor-pointer" href="/medicos/25/perfil/">
+            <div class="w-full text-center avatar">
+                <div class="w-32 mx-auto sm:w-full">
+
+                        <img class="rounded-lg sm:rounded-none sm:rounded-l-lg" src="https://saude-kayamind-minio.aqrour.easypanel.host/kayadoc/media/medic_photos/FOTO.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=tEE1iyojY34tOfrnfIPQ%2F20250319%2Fbrazil%2Fs3%2Faws4_request&amp;X-Amz-Date=20250319T185709Z&amp;X-Amz-Expires=588000&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Signature=91b1875725d0a3ede97fb65dca38b22513b482438b7caf3269acecbf35ff884c" width="200" height="200" alt="Foto de perfil do Dr. Alexandre Sponchiado">
+
+                </div>
+            </div>
+        </a>
+        <div class="mb-6 text-center sm:px-5 xl:mb-5 sm:text-start">
+            <a class="cursor-pointer" href="/medicos/25/perfil/">
+                <h3 class="w-full text-lg font-bold cursor-pointer whitespace-nowrap">Alexandre Sponchiado</h3>
+            </a>
+            <span class="w-full text-sm italic text-gray-500">Clínico Geral</span>
+        </div>
+    </div>
+    <div class="flex flex-col w-full gap-3 mt-auto text-sm font-bold">
+        <div class="flex gap-2 mt-auto text-base sm:px-5">
+            <div>R$ 350,00</div>
+            <div>60 min</div>
+        </div>
+        <div class="flex flex-col gap-2 py-4 bg-white">
+
+                <a class="w-full py-2 text-white border rounded-lg md:text-xl bordmd-glaucous-500 bg-theme_color2-400" href="/medicos/25/agenda/">AGENDAR CONSULTA</a>
+                <a class="w-full py-1 text-xs rounded-lg md:text-sm text-theme_color2-400" href="/medicos/25/perfil/">VER MAIS</a>
+
+        </div>
+    </div>
+</div>
+
+                            <div class="flex flex-col items-center justify-between w-full mx-auto text-center rounded-lg bg-gray-100/50 snap-center">
+    <div class="flex flex-col w-full">
+        <a class="w-full mb-4 cursor-pointer" href="/medicos/8/perfil/">
+            <div class="w-full text-center avatar">
+                <div class="w-32 mx-auto sm:w-full">
+
+                        <img class="rounded-lg sm:rounded-none sm:rounded-l-lg" src="https://saude-kayamind-minio.aqrour.easypanel.host/kayadoc/media/medic_photos/Dra._Bruna_Sanches.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=tEE1iyojY34tOfrnfIPQ%2F20250319%2Fbrazil%2Fs3%2Faws4_request&amp;X-Amz-Date=20250319T185709Z&amp;X-Amz-Expires=588000&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Signature=ed566a915611bdbc165e88814894d88a3461b5558cc3ce99bb5b2e2e897e333b" width="200" height="200" alt="Foto de perfil do Dra. Bruna Sanches">
+
+                </div>
+            </div>
+        </a>
+        <div class="mb-6 text-center sm:px-5 xl:mb-5 sm:text-start">
+            <a class="cursor-pointer" href="/medicos/8/perfil/">
+                <h3 class="w-full text-lg font-bold cursor-pointer whitespace-nowrap">Bruna Sanches</h3>
+            </a>
+            <span class="w-full text-sm italic text-gray-500">Medicina de Família e Comunidade</span>
+        </div>
+    </div>
+    <div class="flex flex-col w-full gap-3 mt-auto text-sm font-bold">
+        <div class="flex gap-2 mt-auto text-base sm:px-5">
+            <div>R$ 320,00</div>
+            <div>30 min</div>
+        </div>
+        <div class="flex flex-col gap-2 py-4 bg-white">
+
+                <a class="w-full py-2 text-white border rounded-lg md:text-xl bordmd-glaucous-500 bg-theme_color2-400" href="/medicos/8/agenda/">AGENDAR CONSULTA</a>
+                <a class="w-full py-1 text-xs rounded-lg md:text-sm text-theme_color2-400" href="/medicos/8/perfil/">VER MAIS</a>
+
+        </div>
+    </div>
+</div>
+
+                            <div class="flex flex-col items-center justify-between w-full mx-auto text-center rounded-lg bg-gray-100/50 snap-center">
+    <div class="flex flex-col w-full">
+        <a class="w-full mb-4 cursor-pointer" href="/medicos/16/perfil/">
+            <div class="w-full text-center avatar">
+                <div class="w-32 mx-auto sm:w-full">
+
+                        <img class="rounded-lg sm:rounded-none sm:rounded-l-lg" src="https://saude-kayamind-minio.aqrour.easypanel.host/kayadoc/media/medic_photos/Foto_de_Perfil_-_Guilherme_Z5myU8M.jpeg?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=tEE1iyojY34tOfrnfIPQ%2F20250319%2Fbrazil%2Fs3%2Faws4_request&amp;X-Amz-Date=20250319T185709Z&amp;X-Amz-Expires=588000&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Signature=8399c302ec510b2aa25c4a22fd726cc06a0482d715f5ae6088c454578f869c19" width="200" height="200" alt="Foto de perfil do Dr. Guilherme Pagliari">
+
+                </div>
+            </div>
+        </a>
+        <div class="mb-6 text-center sm:px-5 xl:mb-5 sm:text-start">
+            <a class="cursor-pointer" href="/medicos/16/perfil/">
+                <h3 class="w-full text-lg font-bold cursor-pointer whitespace-nowrap">Guilherme Pagliari</h3>
+            </a>
+            <span class="w-full text-sm italic text-gray-500">Clínico Geral</span>
+        </div>
+    </div>
+    <div class="flex flex-col w-full gap-3 mt-auto text-sm font-bold">
+        <div class="flex gap-2 mt-auto text-base sm:px-5">
+            <div>R$ 300,00</div>
+            <div>90 min</div>
+        </div>
+        <div class="flex flex-col gap-2 py-4 bg-white">
+
+                <a class="w-full py-2 text-white border rounded-lg md:text-xl bordmd-glaucous-500 bg-theme_color2-400" href="/medicos/16/agenda/">AGENDAR CONSULTA</a>
+                <a class="w-full py-1 text-xs rounded-lg md:text-sm text-theme_color2-400" href="/medicos/16/perfil/">VER MAIS</a>
+
+        </div>
+    </div>
+</div>
+
+                            <div class="flex flex-col items-center justify-between w-full mx-auto text-center rounded-lg bg-gray-100/50 snap-center">
+    <div class="flex flex-col w-full">
+        <a class="w-full mb-4 cursor-pointer" href="/medicos/11/perfil/">
+            <div class="w-full text-center avatar">
+                <div class="w-32 mx-auto sm:w-full">
+
+                        <img class="rounded-lg sm:rounded-none sm:rounded-l-lg" src="https://saude-kayamind-minio.aqrour.easypanel.host/kayadoc/media/medic_photos/Dr._Arailton_Neto.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=tEE1iyojY34tOfrnfIPQ%2F20250319%2Fbrazil%2Fs3%2Faws4_request&amp;X-Amz-Date=20250319T185709Z&amp;X-Amz-Expires=588000&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Signature=41c8b65b27ddddbc18cef4b20dd4b9a4359528abfb5a4e490a895298c2550f54" width="200" height="200" alt="Foto de perfil do Dr. Arailton Neto">
+
+                </div>
+            </div>
+        </a>
+        <div class="mb-6 text-center sm:px-5 xl:mb-5 sm:text-start">
+            <a class="cursor-pointer" href="/medicos/11/perfil/">
+                <h3 class="w-full text-lg font-bold cursor-pointer whitespace-nowrap">Arailton Neto</h3>
+            </a>
+            <span class="w-full text-sm italic text-gray-500">Clínico Geral</span>
+        </div>
+    </div>
+    <div class="flex flex-col w-full gap-3 mt-auto text-sm font-bold">
+        <div class="flex gap-2 mt-auto text-base sm:px-5">
+            <div>R$ 300,00</div>
+            <div>60 min</div>
+        </div>
+        <div class="flex flex-col gap-2 py-4 bg-white">
+
+                <a class="w-full py-2 text-white border rounded-lg md:text-xl bordmd-glaucous-500 bg-theme_color2-400" href="/medicos/11/agenda/">AGENDAR CONSULTA</a>
+                <a class="w-full py-1 text-xs rounded-lg md:text-sm text-theme_color2-400" href="/medicos/11/perfil/">VER MAIS</a>
+
+        </div>
+    </div>
+</div>
+
+                            <div class="flex flex-col items-center justify-between w-full mx-auto text-center rounded-lg bg-gray-100/50 snap-center">
+    <div class="flex flex-col w-full">
+        <a class="w-full mb-4 cursor-pointer" href="/medicos/5/perfil/">
+            <div class="w-full text-center avatar">
+                <div class="w-32 mx-auto sm:w-full">
+
+                        <img class="rounded-lg sm:rounded-none sm:rounded-l-lg" src="https://saude-kayamind-minio.aqrour.easypanel.host/kayadoc/media/medic_photos/amanda.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=tEE1iyojY34tOfrnfIPQ%2F20250319%2Fbrazil%2Fs3%2Faws4_request&amp;X-Amz-Date=20250319T185709Z&amp;X-Amz-Expires=588000&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Signature=ee1a95928c3b7be58749f817b92d5a6cbec7e099617e281f2386eb60703ca450" width="200" height="200" alt="Foto de perfil do Dra. Amanda Medeiros">
+
+                </div>
+            </div>
+        </a>
+        <div class="mb-6 text-center sm:px-5 xl:mb-5 sm:text-start">
+            <a class="cursor-pointer" href="/medicos/5/perfil/">
+                <h3 class="w-full text-lg font-bold cursor-pointer whitespace-nowrap">Amanda Medeiros</h3>
+            </a>
+            <span class="w-full text-sm italic text-gray-500">Clínico Geral</span>
+        </div>
+    </div>
+    <div class="flex flex-col w-full gap-3 mt-auto text-sm font-bold">
+        <div class="flex gap-2 mt-auto text-base sm:px-5">
+            <div>R$ 420,00</div>
+            <div>30 min</div>
+        </div>
+        <div class="flex flex-col gap-2 py-4 bg-white">
+
+                <a class="w-full py-2 text-white border rounded-lg md:text-xl bordmd-glaucous-500 bg-theme_color2-400" href="/medicos/5/agenda/">AGENDAR CONSULTA</a>
+                <a class="w-full py-1 text-xs rounded-lg md:text-sm text-theme_color2-400" href="/medicos/5/perfil/">VER MAIS</a>
+
+        </div>
+    </div>
+</div>
+
+                    </div>
+
+                    <div id="scroll-container" class="flex justify-center p-4">
+                        <div id="scroll-trigger"
+                             class="loading-indicator"
+                             hx-get="/medicos/scroll/2/"
+                             hx-target="#medic_grid"
+                             hx-trigger="intersect once"
+                             hx-swap="beforeend"
+                             hx-include="[name='medico'],[name='specialty'],[name='filter']">
+                            <div class="w-8 h-8 border-4 border-gray-300 rounded-full border-t-theme_color2-400 animate-spin"></div>
+                        </div>
+                    </div>
+
+                </div>
+                <script>
+                    document.body.addEventListener('htmx:afterSwap', function(evt) {
+                        if (evt.detail.target.id === 'medic_grid') {
+                            // Remove o indicador de loading anterior
+                            const oldTrigger = document.querySelector('#scroll-trigger');
+                            if (oldTrigger) {
+                                oldTrigger.remove();
+                            }
+
+                            // Se a resposta estiver vazia, não cria novo trigger
+                            if (evt.detail.xhr.response.trim() === '') {
+                                return;
+                            }
+
+                            // Cria novo trigger para a próxima página
+                            const nextPage = parseInt(evt.detail.pathInfo.finalPath.split('/').slice(-2)[0]) + 1;
+                            const container = document.getElementById('scroll-container');
+
+                            if (container) {
+                                const newTrigger = document.createElement('div');
+                                newTrigger.id = 'scroll-trigger';
+                                newTrigger.className = 'loading-indicator';
+                                newTrigger.setAttribute('hx-get', `/medicos/lista/${nextPage}/`);
+                                newTrigger.setAttribute('hx-target', '#medic_grid');
+                                newTrigger.setAttribute('hx-trigger', 'intersect once');
+                                newTrigger.setAttribute('hx-swap', 'beforeend');
+                                newTrigger.setAttribute('hx-include', '[name="medico"],[name="specialty"],[name="filter"]');
+
+                                const spinner = document.createElement('div');
+                                spinner.className = 'w-8 h-8 border-4 border-gray-300 rounded-full border-t-theme_color2-400 animate-spin';
+                                newTrigger.appendChild(spinner);
+
+                                container.appendChild(newTrigger);
+                            }
+                        }
+                    });
+                </script>
+            </div>
+        </section>
+
+    </main>
+
+        <script src="https://saude-kayamind-minio.aqrour.easypanel.host/kayadoc/staticfiles/src/fontawesome/js/all.min.js?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=tEE1iyojY34tOfrnfIPQ%2F20250319%2Fbrazil%2Fs3%2Faws4_request&amp;X-Amz-Date=20250319T185709Z&amp;X-Amz-Expires=588000&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Signature=be6e9fbd6c37f795418ea9027dc5b8b9ef133598e4c2aa4b6203924f978fbd00"></script>
+        <script src="https://saude-kayamind-minio.aqrour.easypanel.host/kayadoc/staticfiles/src/js/flowbite/flowbite.min.js?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=tEE1iyojY34tOfrnfIPQ%2F20250319%2Fbrazil%2Fs3%2Faws4_request&amp;X-Amz-Date=20250319T185709Z&amp;X-Amz-Expires=588000&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Signature=ed2203e0130a381d9581bbfdde1bd81ea4b2661a7281c45df7e27c1fdd0c730a"></script>
+        <script src="https://saude-kayamind-minio.aqrour.easypanel.host/kayadoc/staticfiles/src/js/htmx/htmx.js?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=tEE1iyojY34tOfrnfIPQ%2F20250319%2Fbrazil%2Fs3%2Faws4_request&amp;X-Amz-Date=20250319T185709Z&amp;X-Amz-Expires=588000&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Signature=d91ad9cd6964b623ba7df54282999bdd12f600d58b87cf17a1b463ab85bdbbb2"></script>
+        <script>
+            !function (t, e) { var o, n, p, r; e.__SV || (window.posthog = e, e._i = [], e.init = function (i, s, a) { function g(t, e) { var o = e.split("."); 2 == o.length && (t = t[o[0]], e = o[1]), t[e] = function () { t.push([e].concat(Array.prototype.slice.call(arguments, 0))) } } (p = t.createElement("script")).type = "text/javascript", p.async = !0, p.src = s.api_host + "/static/array.js", (r = t.getElementsByTagName("script")[0]).parentNode.insertBefore(p, r); var u = e; for (void 0 !== a ? u = e[a] = [] : a = "posthog", u.people = u.people || [], u.toString = function (t) { var e = "posthog"; return "posthog" !== a && (e += "." + a), t || (e += " (stub)"), e }, u.people.toString = function () { return u.toString(1) + ".people (stub)" }, o = "capture identify alias people.set people.set_once set_config register register_once unregister opt_out_capturing has_opted_out_capturing opt_in_capturing reset isFeatureEnabled onFeatureFlags getFeatureFlag getFeatureFlagPayload reloadFeatureFlags group updateEarlyAccessFeatureEnrollment getEarlyAccessFeatures getActiveMatchingSurveys getSurveys".split(" "), n = 0; n < o.length; n++)g(u, o[n]); e._i.push([i, s, a]) }, e.__SV = 1) }(document, window.posthog || []);
+            posthog.init('phc_p3xwpiO7CsBJDfbhVhuk0Dh1gPhzgfhXcYZfBLIWqXl', { api_host: 'https://app.posthog.com' })
+        </script>
+        <!-- Google Tag Manager (noscript) -->
+        <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-599JSZWV"
+            height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+        <!-- End Google Tag Manager (noscript) -->
+
+
+
+
+<footer class="text-white bg-theme_color1-600 flex flex-wrap md:mx-2.5 mt-8 rounded-3xl pt-10 md:text-2xl gap-8 md:px-10 px-4 pb-20">
+    <div class="flex flex-col gap-8 md:ps-12 xl:max-w-xs">
+        <div>
+            <img class="w-1/2 mx-auto lg:w-full"
+                 src="https://saude-kayamind-minio.aqrour.easypanel.host/kayadoc/staticfiles/images/rebranding/kaya%20slogan%20branco.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=tEE1iyojY34tOfrnfIPQ%2F20250319%2Fbrazil%2Fs3%2Faws4_request&amp;X-Amz-Date=20250319T185709Z&amp;X-Amz-Expires=588000&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Signature=7842b22ab2042f0c7e391549706a5e3a81a0ddd9ccb9197edb4a69d89abce4d2"
+                 alt="Kaya slogan Dados, Conhecimento, Impacto">
+        </div>
+        <div class="grid grid-cols-3 gap-4">
+            <div>
+                <a href="/">
+                    <img src="https://saude-kayamind-minio.aqrour.easypanel.host/kayadoc/staticfiles/images/rebranding/kaya%20doc%20branco.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=tEE1iyojY34tOfrnfIPQ%2F20250319%2Fbrazil%2Fs3%2Faws4_request&amp;X-Amz-Date=20250319T185709Z&amp;X-Amz-Expires=588000&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Signature=c2ac343b871639e3992539cea8f8dd6d1e7e323cedbe9063b6ddd6576e32ac60"
+                         alt="Kaya doc">
+                </a>
+            </div>
+            <div>
+                <a href="https://kayabiz.com/?utm_source=Kaya_doc">
+                    <img src="https://saude-kayamind-minio.aqrour.easypanel.host/kayadoc/staticfiles/images/rebranding/kaya%20biz%20branco.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=tEE1iyojY34tOfrnfIPQ%2F20250319%2Fbrazil%2Fs3%2Faws4_request&amp;X-Amz-Date=20250319T185709Z&amp;X-Amz-Expires=588000&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Signature=57fab925bd6e90c4607c0619d387237fe6a2b45036d3e17e0c6e91039c94d3d9"
+                         alt="Kaya Biz">
+                </a>
+            </div>
+            <div>
+                <a href="https://kayamind.com/?utm_source=Kaya_doc">
+                    <img src="https://saude-kayamind-minio.aqrour.easypanel.host/kayadoc/staticfiles/images/rebranding/kaya%20mind%20branco.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=tEE1iyojY34tOfrnfIPQ%2F20250319%2Fbrazil%2Fs3%2Faws4_request&amp;X-Amz-Date=20250319T185709Z&amp;X-Amz-Expires=588000&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Signature=0eb067e81e90cf0b479e25303b65a20c742c13d0968baf4857d706ea3eb08646"
+                         alt="Kaya Mind">
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="flex justify-center mt-6 lg:col-span-2">
+        <div>
+            <div class="gap-8 md:mt-4 md:flex md:flex-wrap">
+                <div class="flex flex-col">
+                    <div class="mb-4 text-2xl md:text-3xl"
+                         style="font-family: Marvin Visions Variable">médicos</div>
+                    <ul class="font-semibold">
+                        <li class="hover:font-bold hover:cursor-pointer">
+                            <a href="/cadastro_medico_form/">Funcionalidades do Kaya Doc</a>
+                        </li>
+                        <li class="hover:font-bold hover:cursor-pointer">
+                            <a href="/cadastro_medico_form/">FAQ</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="flex flex-col">
+                    <div class="mb-4 text-2xl md:text-3xl"
+                         style="font-family: Marvin Visions Variable">pacientes</div>
+                    <ul class="font-semibold">
+                        <li class="hover:font-bold hover:cursor-pointer">
+                            <a href="/sou_paciente/">Gostaria de me tornar <br> paciente</a>
+                        </li>
+                        <li class="my-3 hover:font-bold hover:cursor-pointer">
+                            <a class="px-8 py-2 text-sm rounded-2xl bg-theme_color2-200 text-theme_color2-400" href="https://api.whatsapp.com/send/?phone=5511912423799&text=Quero+saber+mais+sobre+o+kaya+doc+gostaria+de+me+tornar+um+paciente.&type=phone_number&app_absent=0">Saiba mais</a>
+                        </li>
+                        <li class="hover:font-bold hover:cursor-pointer">
+                            <a href="/beneficios_lista/">Benefícios da cannabis</a>
+                        </li>
+                        <li class="hover:font-bold hover:cursor-pointer">
+                            <a href="/glossario_lista/">Glossário canábico</a>
+                        </li>
+                        <li class="hover:font-bold hover:cursor-pointer">
+                            <a href="/sou_paciente/">FAQ</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="flex flex-col">
+                    <div class="mb-4 text-2xl md:text-3xl"
+                         style="font-family: Marvin Visions Variable">marcas</div>
+                    <ul class="font-semibold">
+                        <li class="hover:font-bold hover:cursor-pointer">
+                            <a href="https://api.whatsapp.com/send/?phone=5511912423799&text=Sou+uma+marca+quero+e+estar+no+Kaya+Doc.&type=phone_number&app_absent=0">Sou marca e quero <br> estar no Kaya Doc</a>
+                        </li>
+                        <li class="my-4 hover:font-bold hover:cursor-pointer">
+                            <a class="px-8 py-2 text-sm rounded-2xl bg-theme_color2-200 text-theme_color2-400" href="https://api.whatsapp.com/send/?phone=5511912423799&text=Sou+uma+marca+quero+saber+sobre+o+kaya+doc.&type=phone_number&app_absent=0">Saiba mais</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="md:mt-32">
+        <div class="mb-8 text-2xl font-bold"
+             style="font-family: Marvin Visions Variable">Nos siga nas redes sociais</div>
+        <div class="flex gap-4 mb-10">
+            <div>
+                <a href="https://www.linkedin.com/company/kaya-mind/" target="_blank">
+                    <i class="items-center p-3 text-black rounded-full md:text-4xl fab fa-linkedin-in bg-theme_color2-200"></i>
+                </a>
+            </div>
+            <div>
+                <a href="https://www.instagram.com/kaya.mind/" target="_blank">
+                    <i class="items-center p-3 text-black rounded-full md:text-4xl fab fa-instagram bg-theme_color2-200"></i>
+                </a>
+            </div>
+            <div>
+                <a href="https://www.youtube.com/@kayamind" target="_blank">
+                    <i class="items-center p-3 text-black rounded-full md:text-4xl fab fa-youtube bg-theme_color2-200"></i>
+                </a>
+            </div>
+        </div>
+        <div class="mb-3 text-2xl font-bold"
+             style="font-family: Marvin Visions Variable">Fale conosco</div>
+        <div>
+            <ul class="space-y-3">
+                <li class="flex items-center gap-4">
+                    <i class="text-2xl fas fa-phone text-theme_color2-200"></i> <a href="tel:+55 11 91242-3799" class="hover:underline">+55 11 91242-3799</a>
+                </li>
+                <li class="flex items-center gap-4">
+                    <i class="text-2xl fas fa-envelope text-theme_color2-200"></i> <a href="mail:atendimento@kayadoc.com" class="hover:underline">atendimento@kayadoc.com</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</footer>
+<div class="flex justify-between px-8 py-5 -mt-10 bg-white md:px-20 rounded-t-2xl col-span-full md:mx-2.5">
+    <div>
+        <div class="text-xs font-thin text-black md:text-base"
+             style="font-family: Marvin Visions Variable">
+            COPYRIGHT©KAYA <span id="actual_year"></span>. ALL RIGHTS RESERVED
+        </div>
+    </div>
+    <div>
+        <img class="flex w-5" src="https://saude-kayamind-minio.aqrour.easypanel.host/kayadoc/staticfiles/images/rebranding/k.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=tEE1iyojY34tOfrnfIPQ%2F20250319%2Fbrazil%2Fs3%2Faws4_request&amp;X-Amz-Date=20250319T185709Z&amp;X-Amz-Expires=588000&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Signature=338d17d52f64b57b0ce85a3ddc82a153199a9ab262973cc2bd94a8b7feb35fb2" alt="">
+    </div>
+</div>
+<script>document.getElementById('actual_year').innerText = new Date().getFullYear();</script>
+
+
+        <script>
+            function getCookie(name) {
+                let cookieValue = null;
+                if (document.cookie && document.cookie !== '') {
+                    const cookies = document.cookie.split(';');
+                    for (let i = 0; i < cookies.length; i++) {
+                        const cookie = cookies[i].trim();
+                        if (cookie.substring(0, name.length + 1) === (name + '=')) {
+                            cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+                            break;
+                        }
+                    }
+                }
+                return cookieValue;
+            }
+
+            const csrftoken = getCookie('csrftoken');
+
+            function csrfSafeMethod(method) {
+                return (/^(GET|HEAD|OPTIONS|TRACE)$/.test(method));
+            }
+
+            $.ajaxSetup({
+                beforeSend: function(xhr, settings) {
+                    if (!csrfSafeMethod(settings.type) && !this.crossDomain) {
+                        xhr.setRequestHeader("X-CSRFToken", csrftoken);
+                    }
+                },
+                error: function(xhr, status, error) {
+                    if (xhr.status === 403 && xhr.responseText.includes('CSRF')) {
+                        // Se um erro de CSRF for detectado, atualize a página
+                        location.reload();
+                    }
+                }
+            });
+        </script>
+        <script type="text/javascript"
+                async
+                src="https://d335luupugsy2.cloudfront.net/js/loader-scripts/10becccc-6d9c-4d29-a2e1-253f63061399-loader.js"></script>
+
+    </body>
+</html>
+
+{% endblock content %}
