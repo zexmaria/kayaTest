@@ -11,11 +11,187 @@
     <link rel="icon" type="image/png" href="{% static 'favicon.ico' %}">
 
 </head>
+
+<!-- Navbar -->
+ <nav class="fixed z-50 flex justify-center w-full top-8">
+  <div class="flex items-center w-full max-w-screen-xl p-4 bg-[#232323]
+              mx-2.5 sm:mx-4 md:mx-8 lg:mx-16 xl:mx-24
+              px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16
+              rounded-3xl">
+
+    <!-- LOGO -->
+    <img src="{% static '/kaya_doc_branco.png' %}" class="h-12 mr-3" alt="kaya logo">
+
+
+    <!-- Funcionalidades -->
+    <ul class="flex items-center ml-9 font-medium text-white ">
+      <li class="relative">
+        <button class="flex items-center px-3 py-2 text-white hover:text-blue-500 focus:outline-none">
+          Funcionalidades
+        </button>
+      </li>
+    </ul>
+
+
+       <!-- Paciente -->
+    <ul class="flex items-center ml-6 font-medium text-white">
+      <li class="relative">
+        <button class="flex items-center px-3 py-2 text-white hover:text-blue-500 focus:outline-none">
+          Paciente
+        </button>
+      </li>
+    </ul>
+
+<!-- Left buttons -->
+     <div class="hidden space-x-4 ms-auto md:flex">
+      <a href="#"
+         class="items-center justify-center hidden px-12 py-1 text-lg text-white border
+         rounded-3xl md:flex border-theme_color2-100 hover:bg-theme_color-verdeKaya hover:text-verdeKaya">
+        Teste grátis
+      </a>
+      <a href="#"
+         class="items-center justify-center hidden px-12 py-1 text-lg text-white border
+         rounded-3xl md:flex border-theme_color2-100 hover:bg-theme_color2-100 hover:text-theme_color2-600">
+        Login
+      </a>
+    </div>
+  </div>
+</nav>
 <body class="bg-gray-100 text-gray-800">
+
 
     {% block content %}
 
     {% endblock content %}
+{% load static %}
+
+<!-- FOOTER -->
+
+<footer class="text-white bg-[#232323] flex flex-wrap md:mx-2.5 mt-8 rounded-3xl pt-10 md:text-2xl gap-8 md:px-10 px-4 pb-20">
+    <div class="flex flex-col gap-8 md:ps-12 xl:max-w-xs">
+        <div>
+            <img class="w-1/2 mx-auto lg:w-full"
+                 src="{% static 'footer/kaya_logo_branco.png' %}">
+        </div>
+        <div class="grid grid-cols-3 gap-4">
+            <div>
+                <a href="#">
+                    <img src="{% static 'footer/kaya_doc.png' %}"
+                         alt="Kaya doc">
+                </a>
+            </div>
+            <div>
+                <a href="#">
+                    <img src="{% static 'footer/kaya_biz.png' %}"
+                         alt="Kaya Biz">
+                </a>
+            </div>
+            <div>
+                <a href="#">
+                    <img src="{% static 'footer/kaya_mind.png' %}"
+                         alt="Kaya Mind">
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="flex justify-center mt-6 lg:col-span-2">
+        <div>
+            <div class="gap-8 md:mt-4 md:flex md:flex-wrap">
+                <div class="flex flex-col">
+                    <div class="mb-4 text-2xl md:text-3xl font-marvinVisions"
+                         style="">médicos</div>
+                    <ul class="font-semibold">
+                        <li class="hover:font-bold hover:cursor-pointer">
+                            <a href="#">Funcionalidades do Kaya Doc</a>
+                        </li>
+                        <li class="hover:font-bold hover:cursor-pointer">
+                            <a href="#">FAQ</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="flex flex-col">
+                    <div class="mb-4 text-2xl md:text-3xl font-marvinVisions"
+                         style="">pacientes</div>
+                    <ul class="font-semibold">
+                        <li class="hover:font-bold hover:cursor-pointer">
+                            <a href="#">Gostaria de me tornar <br> paciente</a>
+                        </li>
+                        <li class="my-3 hover:font-bold hover:cursor-pointer">
+                            <a class="px-8 py-2 text-sm rounded-2xl bg-gray-500 text-theme_color2-400" href="#">Saiba mais</a>
+                        </li>
+                        <li class="hover:font-bold hover:cursor-pointer">
+                            <a href="#">Benefícios da cannabis</a>
+                        </li>
+                        <li class="hover:font-bold hover:cursor-pointer">
+                            <a href="#">Glossário canábico</a>
+                        </li>
+                        <li class="hover:font-bold hover:cursor-pointer">
+                            <a href="#">FAQ</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="flex flex-col">
+                    <div class="mb-4 text-2xl md:text-3xl font-marvinVisions"
+                         style="">marcas</div>
+                    <ul class="font-semibold">
+                        <li class="hover:font-bold hover:cursor-pointer">
+                            <a href="#">Sou marca e quero <br> estar no Kaya Doc</a>
+                        </li>
+                        <li class="my-4 hover:font-bold hover:cursor-pointer">
+                            <a class="px-8 py-2 text-sm rounded-2xl bg-gray-500 text-white" href="#">Saiba mais</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="md:mt-32">
+        <div class="mb-2 text-2xl font-bold"
+             style="font-family: Marvin Visions Variable">Nos siga nas redes sociais</div>
+        <div class="flex gap-4 mb-2">
+            <div>
+                <a href="#" target="_blank">
+                    <i class="items-center p-3 text-black rounded-full md:text-4xl fab fa-linkedin-in bg-theme_color2-200"></i>
+                </a>
+            </div>
+            <div>
+                <a href="#" target="_blank">
+                    <i class="items-center p-3 text-black rounded-full md:text-4xl fab fa-instagram bg-theme_color2-200"></i>
+                </a>
+            </div>
+            <div>
+                <a href="#" target="_blank">
+                    <i class="items-center p-3 text-black rounded-full md:text-4xl fab fa-youtube bg-theme_color2-200"></i>
+                </a>
+            </div>
+        </div>
+        <div class="mb-3 text-2xl font-bold"
+             style="font-family: Marvin Visions Variable">Fale conosco</div>
+        <div>
+            <ul class="space-y-3">
+                <li class="flex items-center gap-4">
+                    <i class="text-2xl fas fa-phone text-theme_color2-200"></i> <a href="tel:+55 11 91242-3799" class="hover:underline">+55 11 91242-3799</a>
+                </li>
+                <li class="flex items-center gap-4">
+                    <i class="text-2xl fas fa-envelope text-theme_color2-200"></i> <a href="mail:atendimento@kayadoc.com" class="hover:underline">atendimento@kayadoc.com</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</footer>
+<div class="flex justify-between px-8 py-5 -mt-10 bg-white md:px-20 rounded-t-2xl col-span-full md:mx-2.5">
+    <div>
+        <div class="text-xs font-thin text-black md:text-base"
+             style="font-family: Marvin Visions Variable">
+            COPYRIGHT©KAYA <span id="actual_year"></span>. ALL RIGHTS RESERVED
+        </div>
+    </div>
+    <div>
+        <img class="flex w-5" src="{% static '/favicon.ico' %}" alt="">
+    </div>
+</div>
+
+
 </body>
 </html>
 

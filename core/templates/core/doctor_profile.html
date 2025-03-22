@@ -1,0 +1,80 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Perfil de {{ doctor.nome }}{% endblock title %}
+
+{% block content %}
+
+<!-- Banner/Capa -->
+<div style="background-color: #d4f29d; height: 250px; width: 100%;"></div>
+<div class="container mx-auto p-4">
+  <div class="ml-20">
+
+
+  <!-- SEÇÃO SUPERIOR -->
+  <div class="flex items-center space-x-8">
+    <!-- FOTO -->
+    <div class="ml-10">
+      {% if doctor.foto %}
+        <img src="{{ doctor.foto.url }}" alt="Foto de {{ doctor.nome }}" class="w-48 h-48 rounded-full">
+      {% else %}
+        <img src="{% static 'img/default_profile.png' %}" alt="Foto de perfil padrão" class="w-48 h-48 rounded-full">
+      {% endif %}
+    </div>
+
+    <!-- INF DO MÉDICO -->
+    <div class="mr-10">
+      <h1 class="text-2xl font-bold">{{ doctor.nome }}</h1>
+      <h2 class="text-xl">{{ doctor.especialidade }}</h2>
+      <p><strong>CRM:</strong> {{ doctor.crm }}</p>
+      <p><strong>Localização:</strong> {{ doctor.cidade }}, {{ doctor.estado }}</p>
+      <p><strong>Visualizações:</strong> {{ doctor.visualizacoes }} visualizações</p>
+    </div>
+  </div>
+
+
+  <!-- DESCRIÇÃO -->
+  <div class="mt-10">
+    <h3 class="text-xl font-semibold">Descrição</h3>
+    <div class="w-1/2">
+      <p>{{ doctor.descricao }}</p>
+    </div>
+  </div>
+
+  <!--INFORMAÇÕES GERAIS -->
+  <div>
+    <h1 class="text-xl font-semibold mt-4">Informações gerais</h1>
+    <div class="mt-4">
+      <p><strong>Patologias:</strong><br>{{ doctor.patologias }}</p>
+    </div>
+    <div class="mt-4">
+      <p><strong>Atendimento:</strong><br>{{ doctor.atendimento }}</p>
+    </div>
+    <div class="mt-4">
+      <p><strong>Aceita Convênio:</strong> {% if doctor.aceita_convenio %}Sim{% else %}Não{% endif %}</p>
+    </div>
+    <div class="mt-4">
+      <p><strong>Retorno e Acompanhamento:</strong><br>{{ doctor.retorno_e_acompanhamento }}</p>
+    </div>
+    <div class="mt-4">
+      <p><strong>Experiência com prescrição de produtos à base de cannabis:</strong><br>{{ doctor.experiencia_prescricao }}</p>
+    </div>
+  </div>
+
+  <!--FORMAÇÃO -->
+  <div>
+    <h3 class="text-lg font-semibold mt-4">Formação</h3>
+    <p>{{ doctor.formacao }}</p>
+  </div>
+
+    <!-- VALOR E DURAÇÃO -->
+    <div class="mt-4">
+      <p><strong>Valor da consulta:</strong><br>R$ {{ doctor.preco_consulta|default:"420,00" }}</p>
+    </div>
+    <div class="mt-4">
+      <p><strong>Duração da consulta:</strong><br>{{ doctor.duracao_consulta|default:"50" }} minutos</p>
+    </div>
+
+</div>
+</div>
+{% endblock content %}
