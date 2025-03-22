@@ -11,6 +11,52 @@
     <link rel="icon" type="image/png" href="{% static 'favicon.ico' %}">
 
 </head>
+
+<!-- Navbar -->
+ <nav class="fixed z-50 flex justify-center w-full top-8">
+  <div class="flex items-center w-full max-w-screen-xl p-4 bg-[#232323]
+              mx-2.5 sm:mx-4 md:mx-8 lg:mx-16 xl:mx-24
+              px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16
+              rounded-3xl">
+
+    <!-- LOGO -->
+    <img src="{% static '/kaya_doc_branco.png' %}" class="h-12 mr-3" alt="kaya logo">
+
+
+    <!-- Funcionalidades -->
+    <ul class="flex items-center ml-9 font-medium text-white ">
+      <li class="relative">
+        <button class="flex items-center px-3 py-2 text-white hover:text-blue-500 focus:outline-none">
+          Funcionalidades
+        </button>
+      </li>
+    </ul>
+
+
+       <!-- Paciente -->
+    <ul class="flex items-center ml-6 font-medium text-white">
+      <li class="relative">
+        <button class="flex items-center px-3 py-2 text-white hover:text-blue-500 focus:outline-none">
+          Paciente
+        </button>
+      </li>
+    </ul>
+
+<!-- Left buttons -->
+     <div class="hidden space-x-4 ms-auto md:flex">
+      <a href="#"
+         class="items-center justify-center hidden px-12 py-1 text-lg text-white border
+         rounded-3xl md:flex border-theme_color2-100 hover:bg-theme_color-verdeKaya hover:text-verdeKaya">
+        Teste grátis
+      </a>
+      <a href="#"
+         class="items-center justify-center hidden px-12 py-1 text-lg text-white border
+         rounded-3xl md:flex border-theme_color2-100 hover:bg-theme_color2-100 hover:text-theme_color2-600">
+        Login
+      </a>
+    </div>
+  </div>
+</nav>
 <body class="bg-gray-100 text-gray-800">
 
 
@@ -21,7 +67,7 @@
 
 <!-- FOOTER -->
 
-<footer class="text-white bg-verdeKaya flex flex-wrap md:mx-2.5 mt-8 rounded-3xl pt-10 md:text-2xl gap-8 md:px-10 px-4 pb-20">
+<footer class="text-white bg-[#232323] flex flex-wrap md:mx-2.5 mt-8 rounded-3xl pt-10 md:text-2xl gap-8 md:px-10 px-4 pb-20">
     <div class="flex flex-col gap-8 md:ps-12 xl:max-w-xs">
         <div>
             <img class="w-1/2 mx-auto lg:w-full"
@@ -56,10 +102,10 @@
                          style="">médicos</div>
                     <ul class="font-semibold">
                         <li class="hover:font-bold hover:cursor-pointer">
-                            <a href="/cadastro_medico_form/">Funcionalidades do Kaya Doc</a>
+                            <a href="#">Funcionalidades do Kaya Doc</a>
                         </li>
                         <li class="hover:font-bold hover:cursor-pointer">
-                            <a href="/cadastro_medico_form/">FAQ</a>
+                            <a href="#">FAQ</a>
                         </li>
                     </ul>
                 </div>
@@ -100,9 +146,9 @@
         </div>
     </div>
     <div class="md:mt-32">
-        <div class="mb-8 text-2xl font-bold"
+        <div class="mb-2 text-2xl font-bold"
              style="font-family: Marvin Visions Variable">Nos siga nas redes sociais</div>
-        <div class="flex gap-4 mb-10">
+        <div class="flex gap-4 mb-2">
             <div>
                 <a href="#" target="_blank">
                     <i class="items-center p-3 text-black rounded-full md:text-4xl fab fa-linkedin-in bg-theme_color2-200"></i>

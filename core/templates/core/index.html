@@ -4,106 +4,42 @@
 
 {% block content %}
 {% load static %}
- <!-- Navbar -->
- <nav class="fixed z-50 flex justify-center w-full top-8">
-  <div class="flex items-center w-full max-w-screen-xl p-4 bg-[#232323]
-              mx-2.5 sm:mx-4 md:mx-8 lg:mx-16 xl:mx-24
-              px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16
-              rounded-3xl">
-
-    <!-- LOGO -->
-    <img src="{% static '/kaya_doc_branco.png' %}" class="h-12 mr-3" alt="kaya logo">
-
-
-    <!-- Funcionalidades -->
-    <ul class="flex items-center ml-9 font-medium text-white ">
-      <li class="relative">
-        <button class="flex items-center px-3 py-2 text-white hover:text-blue-500 focus:outline-none">
-          Funcionalidades
-        </button>
-      </li>
-    </ul>
-
-
-       <!-- Paciente -->
-    <ul class="flex items-center ml-6 font-medium text-white">
-      <li class="relative">
-        <button class="flex items-center px-3 py-2 text-white hover:text-blue-500 focus:outline-none">
-          Paciente
-        </button>
-      </li>
-    </ul>
-
-<!-- Left buttons -->
-     <div class="hidden space-x-4 ms-auto md:flex">
-      <a href="#"
-         class="items-center justify-center hidden px-12 py-1 text-lg text-white border
-         rounded-3xl md:flex border-theme_color2-100 hover:bg-theme_color-verdeKaya hover:text-verdeKaya">
-        Teste grátis
-      </a>
-      <a href="#"
-         class="items-center justify-center hidden px-12 py-1 text-lg text-white border
-         rounded-3xl md:flex border-theme_color2-100 hover:bg-theme_color2-100 hover:text-theme_color2-600">
-        Login
-      </a>
-    </div>
-  </div>
-</nav>
-
 
 <!-- Frases -->
-<h2 class="mb-4 text-2xl font-bold md:text-4xl lg:text-5xl text-verdeKaya
-    text-center mt-48 font-marvinVisions">
+<h2 class="mb-4 text-2xl font-bold md:text-4xl lg:text-5xl text-verdeKaya text-center mt-48 font-marvinVisions">
     Encontre seu especialista em cannabis medicinal
 </h2>
-<p class=" text-center font-semibold mb-7 md:text-xl">
+<p class="text-center font-semibold mb-7 md:text-xl">
     Busque por especialidade, pelo nome do profissional da saúde ou utilize umas das palavras-chave abaixo.
 </p>
 
-
-<!-- ESPECIALIDADES -->
-
+<!-- ESPECIALIDADES PARA FILTRO -->
 <div class="flex flex-wrap justify-center gap-2 mt-8">
-  <button class="bg-[#CDEA98] hover:bg-[#A7C879] px-4 py-2 rounded-full font-bold text-sm">
-    TODAS
-  </button>
-
-  <button class="bg-[#CDEA98] hover:bg-[#A7C879] px-4 py-2 rounded-full font-bold text-sm">
-    CLÍNICO GERAL
-  </button>
-
-  <button class="bg-[#CDEA98] hover:bg-[#A7C879] px-4 py-2 rounded-full font-bold text-sm">
-    MEDICINA PREVENTIVA E SOCIAL
-  </button>
-
-    <button class="bg-[#CDEA98] hover:bg-[#A7C879] px-4 py-2 rounded-full font-bold text-sm">
-    MEDICINA DO TRABALHO
-  </button>
+  <button class="bg-[#CDEA98] hover:bg-[#A7C879] px-4 py-2 rounded-full font-bold text-sm">TODAS</button>
+  <button class="bg-[#CDEA98] hover:bg-[#A7C879] px-4 py-2 rounded-full font-bold text-sm">CLÍNICO GERAL</button>
+  <button class="bg-[#CDEA98] hover:bg-[#A7C879] px-4 py-2 rounded-full font-bold text-sm">MEDICINA PREVENTIVA E SOCIAL</button>
+  <button class="bg-[#CDEA98] hover:bg-[#A7C879] px-4 py-2 rounded-full font-bold text-sm">MEDICINA DO TRABALHO</button>
 </div>
 
 <div class="flex flex-wrap justify-center gap-2 mt-8">
     <button class="bg-[#CDEA98] hover:bg-[#A7C879] px-4 py-2 rounded-full font-bold text-sm">
         MEDICINA DE FAMÍLIA E COMUNIDADE - RQE Nº: 21312
     </button>
-
-     <button class="bg-[#CDEA98] hover:bg-[#A7C879] px-4 py-2 rounded-full font-bold text-sm">
-            MEDICINA PREVENTIVA E SOCIAL - RQE Nº: 39217
-    </button>
-
     <button class="bg-[#CDEA98] hover:bg-[#A7C879] px-4 py-2 rounded-full font-bold text-sm">
-            MEDICINA INTEGRATIVA
+        MEDICINA PREVENTIVA E SOCIAL - RQE Nº: 39217
+    </button>
+    <button class="bg-[#CDEA98] hover:bg-[#A7C879] px-4 py-2 rounded-full font-bold text-sm">
+        MEDICINA INTEGRATIVA
     </button>
 </div>
 
 <div class="flex flex-wrap justify-center gap-2 mt-8">
     <button class="bg-[#CDEA98] hover:bg-[#A7C879] px-4 py-2 rounded-full font-bold text-sm">
-            PÓS GRADUAÇÃO EM PSIQUIATRIA / MEDICINA CANABINÓIDE
+        PÓS GRADUAÇÃO EM PSIQUIATRIA / MEDICINA CANABINÓIDE
     </button>
-
     <button class="bg-[#CDEA98] hover:bg-[#A7C879] px-4 py-2 rounded-full font-bold text-sm">
-            DENTISTA
+        DENTISTA
     </button>
-
     <button class="bg-[#CDEA98] hover:bg-[#A7C879] px-4 py-2 rounded-full font-bold text-sm">
         MEDICINA DE FAMÍLIA E COMUNIDADE - RQE Nº: 6198
     </button>
@@ -113,246 +49,77 @@
      <button class="bg-[#CDEA98] hover:bg-[#A7C879] px-4 py-2 rounded-full font-bold text-sm">
         GENERALISTA | MEDICINA CANABINÓIDE
      </button>
-
     <button class="bg-[#CDEA98] hover:bg-[#A7C879] px-4 py-2 rounded-full font-bold text-sm">
         MEDICINA FUNCIONAL INTEGRATIVA
     </button>
-
     <button class="bg-[#CDEA98] hover:bg-[#A7C879] px-4 py-2 rounded-full font-bold text-sm">
         NONE
      </button>
-
     <button class="bg-[#CDEA98] hover:bg-[#A7C879] px-4 py-2 rounded-full font-bold text-sm">
         MEDICINA DE FAMÍLIA E COMUNIDADE
     </button>
 </div>
 
-
 <!-- BARRA DE PESQUISA -->
-<div class="w-full max-w-screen-xl mx-auto px-4 md:px-8">
+<div class="w-full maPESx-w-screen-xl mx-auto px-4 md:px-8">
     <div class="flex flex-wrap justify-center gap-2 mt-8">
-        <input placeholder="Pesquisar " type="text" id="" name="" value="" class="w-5/6 text-sm text-gray-900 bg-gray-50 border-0
-               rounded-lg drop-shadow-xl md:py-5 md:px-12 md:rounded-full ps-10">
+        <input placeholder="Pesquisar" type="text" name="q" class="w-5/6 text-gray-900 bg-gray-50 border-0
+        rounded-lg drop-shadow-xl md:py-5 md:px-12 md:rounded-full ps-10">
+    </div>
+    <div class="mb-4 font-bold ml-10 mt-6 pl-12 md:pl-12 text-verdeKaya">
+        Total de {{ doctors|length }} prescritores
     </div>
 
-    <div class="mb-4 font-bold ml-10 mt-6 pl-12 md:pl-12 text-verdeKaya">
-        Total de 22 prescritores
-      </div>
-    <p class="font-bold ml-20 flex text-lg mb-3 text-gray-500 ">Filtros</p>
-
+    <!-- FILTROS-->
+    <p class="font-bold ml-20 flex text-lg mb-3 text-gray-500">Filtros</p>
     <div class="ml-10">
         <div class="ml-10">
-            <button class="mr-3 text-gray-500 bg-gray-300 px-4 py-2 rounded-full font-bold text-sm">
-                MENOR VALOR
-            </button>
 
-            <button class="mr-3 text-gray-500 bg-gray-300 px-4 py-2 rounded-full font-bold text-sm">
-                MAIOR VALOR
-            </button>
-
-            <button class="text-gray-500 bg-gray-300 px-4 py-2 rounded-full font-bold text-sm">
-                VISUALIZAÇÕES
-            </button>
+            <!--BOTÕES DE FILTRO PADRÃO-->
+            <button class="mr-3 text-gray-500 bg-gray-300 px-4 py-2 rounded-full font-bold text-sm">MENOR VALOR</button>
+            <button class="mr-3 text-gray-500 bg-gray-300 px-4 py-2 rounded-full font-bold text-sm">MAIOR VALOR</button>
+            <button class="text-gray-500 bg-gray-300 px-4 py-2 rounded-full font-bold text-sm">VISUALIZAÇÕES</button>
         </div>
     </div>
 </div>
 
-<!--  BANNER MÉDICOS -->
-
+<!-- BANNER DE PROFILE -->
 <div class="mt-10 grid grid-cols-1 gap-6 pb-6 mx-6 overflow-x-auto sm:grid-cols-2 md:grid-cols-3 xl:px-9 xl:gap-4 xl:max-w-screen-xl xl:mx-auto">
-
-    <!-- MÉDICO 001 -->
+    {% for doctor in doctors %}
     <div class="flex flex-col items-center justify-between w-full mx-auto text-center rounded-lg bg-gray-100/50">
         <div class="flex flex-col w-full">
-            <a class="w-full mb-4 cursor-pointer" href="#">
+            <a class="w-full mb-4 cursor-pointer" href="{% url 'core:doctor_profile' doctor.id %}">
                 <div class="w-full text-center avatar">
                     <div class="w-32 mx-auto sm:w-full">
-                        <img class="rounded-lg" src="static/img/001.png" alt="doctor001">
+                        {% if doctor.foto %}
+                            <img class="rounded-lg" src="{{ doctor.foto.url }}" alt="Foto de {{ doctor.nome }}">
+                        {% else %}
+                            <img class="rounded-lg" src="{% static 'img/default_profile.png' %}" alt="Foto padrão">
+                        {% endif %}
                     </div>
                 </div>
             </a>
             <div class="mb-6 text-center sm:px-5 xl:mb-5 sm:text-start">
-                <a href="#">
-                    <h3 class="w-full text-lg font-bold whitespace-nowrap">Camila Ferreira</h3>
+                <a href="{% url 'core:doctor_profile' doctor.id %}">
+                    <h3 class="w-full text-lg font-bold whitespace-nowrap">{{ doctor.nome }}</h3>
                 </a>
-                <span class="w-full text-sm italic text-gray-500">Medicina Integrativa</span>
+                <span class="w-full text-sm italic text-gray-500">{{ doctor.especialidade }}</span>
             </div>
         </div>
         <div class="flex flex-col w-full gap-3 mt-auto text-sm font-bold">
             <div class="flex gap-2 mt-auto text-base sm:px-5">
-                <div>R$ 420,00</div>
-                <div>50 min</div>
+                <div>R$ {{ doctor.preco_consulta|default:"420,00" }}</div>
+                <div>{{ doctor.duracao_consulta|default:"50" }} min</div>
             </div>
         </div>
         <div class="flex flex-col gap-2 py-4 bg-white">
             <a class="w-full px-6 py-2 text-white border rounded-lg md:text-xl bg-verdeKaya" href="#">AGENDAR CONSULTA</a>
         </div>
         <div class="flex flex-col bg-white">
-            <a class="w-full px-6 py-2 border text-verdeKaya rounded-lg md:text-lg bg-white" href="#">VER MAIS</a>
+            <a class="w-full px-6 py-2 border text-verdeKaya rounded-lg md:text-lg bg-white" href="{% url 'core:doctor_profile' doctor.id %}">VER MAIS</a>
         </div>
     </div>
-
-    <!-- MÉDICO 002 -->
-    <div class="flex flex-col items-center justify-between w-full mx-auto text-center rounded-lg bg-gray-100/50">
-        <div class="flex flex-col w-full">
-            <a class="w-full mb-4 cursor-pointer" href="#">
-                <div class="w-full text-center avatar">
-                    <div class="w-32 mx-auto sm:w-full">
-                        <img class="rounded-lg" src="static/img/002.png" alt="doctor002">
-                    </div>
-                </div>
-            </a>
-            <div class="mb-6 text-center sm:px-5 xl:mb-5 sm:text-start">
-                <a href="#">
-                    <h3 class="w-full text-lg font-bold whitespace-nowrap">Aline Martins</h3>
-                </a>
-                <span class="w-full text-sm italic text-gray-500">Clínica Geral</span>
-            </div>
-        </div>
-        <div class="flex flex-col w-full gap-3 mt-auto text-sm font-bold">
-            <div class="flex gap-2 mt-auto text-base sm:px-5">
-                <div>R$ 420,00</div>
-                <div>45 min</div>
-            </div>
-        </div>
-        <div class="flex flex-col gap-2 py-4 bg-white">
-            <a class="w-full px-6 py-2 text-white border rounded-lg md:text-xl bg-verdeKaya" href="#">AGENDAR CONSULTA</a>
-        </div>
-        <div class="flex flex-col bg-white">
-            <a class="w-full px-6 py-2 border text-verdeKaya rounded-lg md:text-lg bg-white" href="#">VER MAIS</a>
-        </div>
-    </div>
-
-
-        <!-- MÉDICO 003 -->
-    <div class="flex flex-col items-center justify-between w-full mx-auto text-center rounded-lg bg-gray-100/50">
-        <div class="flex flex-col w-full">
-            <a class="w-full mb-4 cursor-pointer" href="#">
-                <div class="w-full text-center avatar">
-                    <div class="w-32 mx-auto sm:w-full">
-                        <img class="rounded-lg" src="static/img/003.png" alt="doctor003">
-                    </div>
-                </div>
-            </a>
-            <div class="mb-6 text-center sm:px-5 xl:mb-5 sm:text-start">
-                <a href="#">
-                    <h3 class="w-full text-lg font-bold whitespace-nowrap">Leandro Costa</h3>
-                </a>
-                <span class="w-full text-sm italic text-gray-500">Medicina de Família e Comunidade</span>
-            </div>
-        </div>
-        <div class="flex flex-col w-full gap-3 mt-auto text-sm font-bold">
-            <div class="flex gap-2 mt-auto text-base sm:px-5">
-                <div>R$ 420,00</div>
-                <div>60 min</div>
-            </div>
-        </div>
-        <div class="flex flex-col gap-2 py-4 bg-white">
-            <a class="w-full px-6 py-2 text-white border rounded-lg md:text-xl bg-verdeKaya" href="#">AGENDAR CONSULTA</a>
-        </div>
-        <div class="flex flex-col bg-white">
-            <a class="w-full px-6 py-2 border text-verdeKaya rounded-lg md:text-lg bg-white" href="#">VER MAIS</a>
-        </div>
-    </div>
-
-
-<!-- MÉDICO 004 -->
-    <div class="flex flex-col items-center justify-between w-full mx-auto text-center rounded-lg bg-gray-100/50">
-        <div class="flex flex-col w-full">
-            <a class="w-full mb-4 cursor-pointer" href="#">
-                <div class="w-full text-center avatar">
-                    <div class="w-32 mx-auto sm:w-full">
-                        <img class="rounded-lg" src="static/img/004.png" alt="doctor004">
-                    </div>
-                </div>
-            </a>
-            <div class="mb-6 text-center sm:px-5 xl:mb-5 sm:text-start">
-                <a href="#">
-                    <h3 class="w-full text-lg font-bold whitespace-nowrap">Juliana Rocha</h3>
-                </a>
-                <span class="w-full text-sm italic text-gray-500">Generalista | Medicina Endocanabinóide</span>
-            </div>
-        </div>
-        <div class="flex flex-col w-full gap-3 mt-auto text-sm font-bold">
-            <div class="flex gap-2 mt-auto text-base sm:px-5">
-                <div>R$ 420,00</div>
-                <div>40 min</div>
-            </div>
-        </div>
-        <div class="flex flex-col gap-2 py-4 bg-white">
-            <a class="w-full px-6 py-2 text-white border rounded-lg md:text-xl bg-verdeKaya" href="#">AGENDAR CONSULTA</a>
-        </div>
-        <div class="flex flex-col bg-white">
-            <a class="w-full px-6 py-2 border text-verdeKaya rounded-lg md:text-lg bg-white" href="#">VER MAIS</a>
-        </div>
-    </div>
-
-     <!-- MÉDICO 005 -->
-    <div class="flex flex-col items-center justify-between w-full mx-auto text-center rounded-lg bg-gray-100/50">
-        <div class="flex flex-col w-full">
-            <a class="w-full mb-4 cursor-pointer" href="#">
-                <div class="w-full text-center avatar">
-                    <div class="w-32 mx-auto sm:w-full">
-                        <img class="rounded-lg" src="static/img/005.png" alt="doctor005">
-                    </div>
-                </div>
-            </a>
-            <div class="mb-6 text-center sm:px-5 xl:mb-5 sm:text-start">
-                <a href="#">
-                    <h3 class="w-full text-lg font-bold whitespace-nowrap">Rafael Monteiro</h3>
-                </a>
-                <span class="w-full text-sm italic text-gray-500">Clínico Geral</span>
-            </div>
-        </div>
-        <div class="flex flex-col w-full gap-3 mt-auto text-sm font-bold">
-            <div class="flex gap-2 mt-auto text-base sm:px-5">
-                <div>R$ 420,00</div>
-                <div>30 min</div>
-            </div>
-        </div>
-        <div class="flex flex-col gap-2 py-4 bg-white">
-            <a class="w-full px-6 py-2 text-white border rounded-lg md:text-xl bg-verdeKaya" href="#">AGENDAR CONSULTA</a>
-        </div>
-        <div class="flex flex-col bg-white">
-            <a class="w-full px-6 py-2 border text-verdeKaya rounded-lg md:text-lg bg-white" href="#">VER MAIS</a>
-        </div>
-    </div>
-
-
-    <!-- MÉDICO 005 -->
-    <div class="flex flex-col items-center justify-between w-full mx-auto text-center rounded-lg bg-gray-100/50">
-        <div class="flex flex-col w-full">
-            <a class="w-full mb-4 cursor-pointer" href="#">
-                <div class="w-full text-center avatar">
-                    <div class="w-32 mx-auto sm:w-full">
-                        <img class="rounded-lg" src="static/img/006.png" alt="doctor006">
-                    </div>
-                </div>
-            </a>
-            <div class="mb-6 text-center sm:px-5 xl:mb-5 sm:text-start">
-                <a href="#">
-                    <h3 class="w-full text-lg font-bold whitespace-nowrap">Carlos Monteiro</h3>
-                </a>
-                <span class="w-full text-sm italic text-gray-500"> Medicina do Trabalho</span>
-            </div>
-        </div>
-        <div class="flex flex-col w-full gap-3 mt-auto text-sm font-bold">
-            <div class="flex gap-2 mt-auto text-base sm:px-5">
-                <div>R$ 420,00</div>
-                <div>50 min</div>
-            </div>
-        </div>
-        <div class="flex flex-col gap-2 py-4 bg-white">
-            <a class="w-full px-6 py-2 text-white border rounded-lg md:text-xl bg-verdeKaya" href="#">AGENDAR CONSULTA</a>
-        </div>
-        <div class="flex flex-col bg-white">
-            <a class="w-full px-6 py-2 border text-verdeKaya rounded-lg md:text-lg bg-white" href="#">VER MAIS</a>
-        </div>
-    </div>
-
-
+    {% endfor %}
 </div>
-
-
 
 {% endblock content %}
