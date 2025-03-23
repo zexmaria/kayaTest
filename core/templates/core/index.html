@@ -5,7 +5,6 @@
 {% block content %}
 {% load static %}
 
-<!-- Frases -->
 <h2 class="mb-4 text-2xl font-bold md:text-4xl lg:text-5xl text-verdeKaya text-center mt-48 font-marvinVisions">
     Encontre seu especialista em cannabis medicinal
 </h2>
@@ -14,74 +13,91 @@
 </p>
 
 <!-- ESPECIALIDADES PARA FILTRO -->
+
 <div class="flex flex-wrap justify-center gap-2 mt-8">
-  <button class="bg-[#CDEA98] hover:bg-[#A7C879] px-4 py-2 rounded-full font-bold text-sm">TODAS</button>
-  <button class="bg-[#CDEA98] hover:bg-[#A7C879] px-4 py-2 rounded-full font-bold text-sm">CLÍNICO GERAL</button>
-  <button class="bg-[#CDEA98] hover:bg-[#A7C879] px-4 py-2 rounded-full font-bold text-sm">MEDICINA PREVENTIVA E SOCIAL</button>
-  <button class="bg-[#CDEA98] hover:bg-[#A7C879] px-4 py-2 rounded-full font-bold text-sm">MEDICINA DO TRABALHO</button>
+  <form method="get" action="">
+      <input type="hidden" name="especialidade" value="">
+      <button type="submit" class="bg-[#CDEA98] hover:bg-[#A7C879] px-4 py-2 rounded-full font-bold text-sm">TODAS</button>
+  </form>
+  <form method="get" action="">
+      <input type="hidden" name="especialidade" value="CLÍNICO GERAL">
+      <button type="submit" class="bg-[#CDEA98] hover:bg-[#A7C879] px-4 py-2 rounded-full font-bold text-sm">CLÍNICO GERAL</button>
+  </form>
+  <form method="get" action="">
+      <input type="hidden" name="especialidade" value="MEDICINA PREVENTIVA E SOCIAL">
+      <button type="submit" class="bg-[#CDEA98] hover:bg-[#A7C879] px-4 py-2 rounded-full font-bold text-sm">MEDICINA PREVENTIVA E SOCIAL</button>
+  </form>
+  <form method="get" action="">
+      <input type="hidden" name="especialidade" value="MEDICINA DO TRABALHO">
+      <button type="submit" class="bg-[#CDEA98] hover:bg-[#A7C879] px-4 py-2 rounded-full font-bold text-sm">MEDICINA DO TRABALHO</button>
+  </form>
+
 </div>
 
 <div class="flex flex-wrap justify-center gap-2 mt-8">
-    <button class="bg-[#CDEA98] hover:bg-[#A7C879] px-4 py-2 rounded-full font-bold text-sm">
-        MEDICINA DE FAMÍLIA E COMUNIDADE - RQE Nº: 21312
-    </button>
-    <button class="bg-[#CDEA98] hover:bg-[#A7C879] px-4 py-2 rounded-full font-bold text-sm">
-        MEDICINA PREVENTIVA E SOCIAL - RQE Nº: 39217
-    </button>
-    <button class="bg-[#CDEA98] hover:bg-[#A7C879] px-4 py-2 rounded-full font-bold text-sm">
-        MEDICINA INTEGRATIVA
-    </button>
+  <form method="get" action="">
+      <input type="hidden" name="especialidade" value="MEDICINA DE FAMÍLIA E COMUNIDADE - RQE N: 21312 ">
+      <button type="submit" class="bg-[#CDEA98] hover:bg-[#A7C879] px-4 py-2 rounded-full font-bold text-sm">MEDICINA DE FAMÍLIA E COMUNIDADE - RQE Nº: 21312</button>
+  </form>
+  <form method="get" action="">
+      <input type="hidden" name="especialidade" value="MEDICINA PREVENTIVA E SOCIAL - RQE N: 39217">
+      <button type="submit" class="bg-[#CDEA98] hover:bg-[#A7C879] px-4 py-2 rounded-full font-bold text-sm">MEDICINA PREVENTIVA E SOCIAL - RQE Nº: 39217</button>
+  </form>
+  <form method="get" action="">
+      <input type="hidden" name="especialidade" value="MEDICINA INTEGRATIVA">
+      <button type="submit" class="bg-[#CDEA98] hover:bg-[#A7C879] px-4 py-2 rounded-full font-bold text-sm">MEDICINA INTEGRATIVA</button>
+  </form>
 </div>
 
 <div class="flex flex-wrap justify-center gap-2 mt-8">
-    <button class="bg-[#CDEA98] hover:bg-[#A7C879] px-4 py-2 rounded-full font-bold text-sm">
-        PÓS GRADUAÇÃO EM PSIQUIATRIA / MEDICINA CANABINÓIDE
-    </button>
-    <button class="bg-[#CDEA98] hover:bg-[#A7C879] px-4 py-2 rounded-full font-bold text-sm">
-        DENTISTA
-    </button>
-    <button class="bg-[#CDEA98] hover:bg-[#A7C879] px-4 py-2 rounded-full font-bold text-sm">
-        MEDICINA DE FAMÍLIA E COMUNIDADE - RQE Nº: 6198
-    </button>
+
+  <form method="get" action="">
+      <input type="hidden" name="especialidade" value="PÓS GRADUAÇÃO EM PSIQUIATRIA / MEDICINA CANABINOIDE">
+      <button type="submit" class="bg-[#CDEA98] hover:bg-[#A7C879] px-4 py-2 rounded-full font-bold text-sm">PÓS GRADUAÇÃO EM PSIQUIATRIA / MEDICINA CANABINÓIDE</button>
+  </form>
+  <form method="get" action="">
+      <input type="hidden" name="especialidade" value="DENTISTA">
+      <button type="submit" class="bg-[#CDEA98] hover:bg-[#A7C879] px-4 py-2 rounded-full font-bold text-sm">DENTISTA</button>
+  </form>
+    <form method="get" action="">
+      <input type="hidden" name="especialidade" value="MEDICINA DE FAMÍLIA E COMUNIDADE - RQE N: 6198 ">
+      <button type="submit" class="bg-[#CDEA98] hover:bg-[#A7C879] px-4 py-2 rounded-full font-bold text-sm">MEDICINA DE FAMÍLIA E COMUNIDADE - RQE Nº: 6198</button>
+  </form>
 </div>
 
+<!-- DIV VAZIA-->
 <div class="flex flex-wrap justify-center gap-2 mt-8">
-     <button class="bg-[#CDEA98] hover:bg-[#A7C879] px-4 py-2 rounded-full font-bold text-sm">
-        GENERALISTA | MEDICINA CANABINÓIDE
-     </button>
-    <button class="bg-[#CDEA98] hover:bg-[#A7C879] px-4 py-2 rounded-full font-bold text-sm">
-        MEDICINA FUNCIONAL INTEGRATIVA
-    </button>
-    <button class="bg-[#CDEA98] hover:bg-[#A7C879] px-4 py-2 rounded-full font-bold text-sm">
-        NONE
-     </button>
-    <button class="bg-[#CDEA98] hover:bg-[#A7C879] px-4 py-2 rounded-full font-bold text-sm">
-        MEDICINA DE FAMÍLIA E COMUNIDADE
-    </button>
+
 </div>
+
+
 
 <!-- BARRA DE PESQUISA -->
-<div class="w-full maPESx-w-screen-xl mx-auto px-4 md:px-8">
-    <div class="flex flex-wrap justify-center gap-2 mt-8">
-        <input placeholder="Pesquisar" type="text" name="q" class="w-5/6 text-gray-900 bg-gray-50 border-0
-        rounded-lg drop-shadow-xl md:py-5 md:px-12 md:rounded-full ps-10">
+    <div class="w-full maPESx-w-screen-xl mx-auto px-4 md:px-8">
+        <div class="flex flex-wrap justify-center gap-2 mt-8">
+            <input placeholder="Pesquisar" type="text" name="q" class="w-5/6 text-gray-900 bg-gray-50 border-0
+            rounded-lg drop-shadow-xl md:py-5 md:px-12 md:rounded-full ps-10">
     </div>
+<!-- PRESCRITORES -->
     <div class="mb-4 font-bold ml-10 mt-6 pl-12 md:pl-12 text-verdeKaya">
         Total de {{ doctors|length }} prescritores
     </div>
 
-    <!-- FILTROS-->
+
     <p class="font-bold ml-20 flex text-lg mb-3 text-gray-500">Filtros</p>
     <div class="ml-10">
         <div class="ml-10">
 
-            <!--BOTÕES DE FILTRO PADRÃO-->
-            <button class="mr-3 text-gray-500 bg-gray-300 px-4 py-2 rounded-full font-bold text-sm">MENOR VALOR</button>
-            <button class="mr-3 text-gray-500 bg-gray-300 px-4 py-2 rounded-full font-bold text-sm">MAIOR VALOR</button>
-            <button class="text-gray-500 bg-gray-300 px-4 py-2 rounded-full font-bold text-sm">VISUALIZAÇÕES</button>
-        </div>
-    </div>
-</div>
+
+<!--BOTÕES DE FILTRO PADRÃO-->
+    <form method="get" action="" class="ml-10 flex flex-wrap gap-2 mt-4">
+        {% if especialidade_ativa %}
+            <input type="hidden" name="especialidade" value="{{ especialidade_ativa }}">
+        {% endif %}
+        <button type="submit" name="ordenar" value="menor_valor" class="text-gray-500 bg-gray-300 px-4 py-2 rounded-full font-bold text-sm">MENOR VALOR</button>
+        <button type="submit" name="ordenar" value="maior_valor" class="text-gray-500 bg-gray-300 px-4 py-2 rounded-full font-bold text-sm">MAIOR VALOR</button>
+        <button type="submit" name="ordenar" value="visualizacoes" class="text-gray-500 bg-gray-300 px-4 py-2 rounded-full font-bold text-sm">VISUALIZAÇÕES</button>
+    </form>
 
 <!-- BANNER DE PROFILE -->
 <div class="mt-10 grid grid-cols-1 gap-6 pb-6 mx-6 overflow-x-auto sm:grid-cols-2 md:grid-cols-3 xl:px-9 xl:gap-4 xl:max-w-screen-xl xl:mx-auto">
@@ -120,6 +136,10 @@
         </div>
     </div>
     {% endfor %}
+            </div>
+        </div>
+    </div>
 </div>
+
 
 {% endblock content %}
