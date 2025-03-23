@@ -9,33 +9,33 @@ class Doctor(models.Model):
     estado = models.CharField(max_length=2)
     visualizacoes = models.IntegerField(default=0)
 
-    descricao = models.TextField(
+    descricao = models.TextField(null=True, default="Não informado",
         help_text="Descreva a pessoa do médico."
     )
 
-    patologias = models.TextField(
+    patologias = models.TextField(null=True, default="Não informado",
         help_text="Lista de patologias, separadas por vírgula."
     )
 
-    atendimento = models.TextField(
+    atendimento = models.TextField(null=True, default="Não informado",
         help_text="Grupos atendidos (ex: Crianças, Adolescentes, Adultos e Idosos)."
     )
 
     convenio = models.BooleanField(default=False)
 
-    retorno_acompanhamento = models.CharField(
+    retorno_acompanhamento = models.CharField(default="Não informado",
         max_length=100,
         blank=True, null=True,
         help_text="Ex: 'Retorno em até 30 dias'"
     )
 
-    experiencia_prescricao = models.CharField(
+    experiencia_prescricao = models.CharField(default="Não informado",
         max_length=500,
         blank=True, null=True,
         help_text="Ex: 'Sim' ou 'Não' ou 'Não informado'"
     )
 
-    formacao = models.TextField(
+    formacao = models.TextField(default="Não informado",
         blank=True, null=True,
         help_text="Onde se formou e suas especialidades"
     )
