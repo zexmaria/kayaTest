@@ -1,12 +1,30 @@
-# Projeto Kaya Doc Teste
+# Projeto Kaya Doc (teste para backend jr)
 ***
 
-### 💻 Sobre o Projeto
+## 💻 Sobre o Projeto
 ***
 
-Este é um projeto feito com Python, Django e Tailwindcss. O projeto é um teste da empresa Kaya onde precisei replicar a página https://kayadoc.com/medicos/ e a página de perfil de algum dos médicos (ex: https://kayadoc.com/medicos/23/perfil/) usando Templates do Django para servir essas páginas no localhost.
+Este é um projeto feito com Python, Django e Tailwindcss. O projeto é um teste da empresa Kaya onde precisei replicar a página https://kayadoc.com/medicos/ e a página de perfil de algum dos médicos (ex: https://kayadoc.com/medicos/23/perfil/) usando Tailwindcss e Templates do Django para servir essas páginas no localhost.
 
 Aqui você encontra um passo a passo para **clonar**, **instalar** e **rodar** o projeto no seu computador.
+***
+## Observações iniciais:
+* O site foi desenvolvido baseado na versão **<u>Desktop</u>** e para rodar perfeitamente apenas nesta resolução(1024px). Não é garantido que funcionará bem em resolução diferente (tablet ou mobile).
+
+* O site foi feito de forma dinâmica onde o banco de dados precisará ser populado para que seja apresentado de forma correta.
+
+* O tutorial a seguir foi pensado para sistemas Linux, não testado para Windows ou macOS.
+
+***
+## Pré-requisitos
+
+
+* Python 3.10+
+* PIP
+* Django 5+
+* Node.js 22.14+
+* NPM
+* Tailwindcss 3.4.17
 ***
 
 ## 🛠️  Instalações necessárias:
@@ -43,22 +61,36 @@ Se não estiver instalado, siga os passos abaixo:
 1. Verifique se o Git está instalado.
 
 No terminal digite: 
+
 ````git --version````
 
 2. Caso não apareça nenhuma versão instalada, digite:
+
 ````sudo apt install git -y````
 
 ### ⚙️Node.js
+1. Verifique se o Node.js e o NPM está instalado.
 
-1. Baixe o instalador Node.js 20.x LTS (atual estável em 2025)
+````node -v````
+
+````npm -v````
+
+2. Caso não apareça nenhuma versão instalada, siga os passos abaixo: 
+
+
+3. Baixe o instalador Node.js 20.x LTS (atual estável em 2025)
 
 No terminal digite:
 ````curl -fsSL https://deb.nodesource.com/setup_20.x | sudo -E bash -````
-2. Instale o Node.js:
+
+
+4. Instale o Node.js:
 
 No terminal digite:
 ````sudo apt install -y nodejs````
-3. Verifique se o Node.js e o npm foram instalados:
+
+
+5. Verifique se o Node.js e o npm foram instalados:
 
 ````node -v````
 
@@ -83,7 +115,7 @@ Navegue até a pasta do projeto:
 ````cd KayaTest````
 
 ### 3. Crie um ambiente virtual com VENV
-Instale um ambente virtual com  o nome de sua preferência. Como exemplo estarei usando ".meuvenv"
+Instale um ambente virtual com  o nome de sua preferência. Como exemplo estarei usando o nome ".meuvenv"
 
 ````python3 -m venv .meuvenv````
 
@@ -100,7 +132,10 @@ Com ambiente virtual ativo, instale as dependências do projeto com o comando ab
 1. Use o comando abaixo para instalar o Tailwind.:
 
 ```` npm install -D tailwindcss@3 ````
+
+
 2. Para ativar o Tailwind, use o comando abaixo:
+
 
 ````npx tailwindcss -i ./core/static/css/input.css -o ./core/static/css/output.css --watch````
 
