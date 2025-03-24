@@ -1,8 +1,5 @@
 from django.shortcuts import render, get_object_or_404
 from .models import Doctor
-from rest_framework.views import APIView
-from rest_framework.response import Response
-from django.shortcuts import render
 
 
 def doctor_profile(request, doctor_id):
@@ -10,8 +7,7 @@ def doctor_profile(request, doctor_id):
     return render(request, "core/doctor_profile.html", {"doctor": doctor})
 
 
-class DoctorListView(APIView):
-    def get(self, request):
+def doctorListView(request):
         doctors = Doctor.objects.all()
 
         especialidade = request.GET.get("especialidade")
