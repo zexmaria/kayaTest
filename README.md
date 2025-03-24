@@ -64,7 +64,7 @@ No terminal digite:
 
 ````git --version````
 
-2. Caso não apareça nenhuma versão instalada, digite:
+* Caso não apareça nenhuma versão instalada, digite:
 
 ````sudo apt install git -y````
 
@@ -75,22 +75,25 @@ No terminal digite:
 
 ````npm -v````
 
-2. Caso não apareça nenhuma versão instalada, siga os passos abaixo: 
+
+* Caso não apareça nenhuma versão instalada, siga os passos abaixo: 
 
 
-3. Baixe o instalador Node.js 20.x LTS (atual estável em 2025)
+2. Baixe o instalador Node.js 20.x LTS (atual estável em 2025)
 
 No terminal digite:
+
 ````curl -fsSL https://deb.nodesource.com/setup_20.x | sudo -E bash -````
 
 
-4. Instale o Node.js:
+3. Instale o Node.js:
 
 No terminal digite:
+
 ````sudo apt install -y nodejs````
 
 
-5. Verifique se o Node.js e o npm foram instalados:
+4. Verifique se o Node.js e o npm foram instalados:
 
 ````node -v````
 
@@ -126,6 +129,7 @@ Ative o ambiente virtual:
 
 ### 4. Instale as dependências
 Com ambiente virtual ativo, instale as dependências do projeto com o comando abaixo:
+
 ````pip install -r requirements.txt````
 
 ### 5. Instale o Tailwindcss v3
@@ -147,9 +151,22 @@ Com ambiente virtual ativo, instale as dependências do projeto com o comando ab
 
 ```python manage.py runserver```
 
-2. Para acessar o painel administrativo do Django, crie um superusuário em outro terminal e com o venv ativado, usando o comando:
+2. Acesse o localhost pelo browser com o seguinte endereço:
+
+http://127.0.0.1:8000/
+
+3. Para acessar o painel administrativo do Django, crie um superusuário em outro terminal e com o venv ativado, usando o comando:
 
 ````python manage.py createsuperuser````
 
 O terminal irá solicitar que você insira um nome de usuário, endereço de e-mail e senha para o superusuário. Preencha as informações conforme solicitado.
+
+4. Acesse o painel administrativo do Django com o seguinte endereço:
+
+http://127.0.0.1:8000/admin/
+
+5. Após fazer login como superusuario, cadastre alguns médicos para usar a aplicação com todas suas funcionalidades 
+***
+
+
 
