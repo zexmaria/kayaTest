@@ -9,43 +9,56 @@ class Doctor(models.Model):
     estado = models.CharField(max_length=2)
     visualizacoes = models.IntegerField(default=0)
 
-    descricao = models.TextField(null=True, default="Não informado",
-        help_text="Descreva a pessoa do médico."
+    descricao = models.TextField(
+        null=True, default="Não informado", help_text="Descreva a pessoa do médico."
     )
 
-    patologias = models.TextField(null=True, default="Não informado",
-        help_text="Lista de patologias, separadas por vírgula."
+    patologias = models.TextField(
+        null=True,
+        default="Não informado",
+        help_text="Lista de patologias, separadas por vírgula.",
     )
 
-    atendimento = models.TextField(null=True, default="Não informado",
-        help_text="Grupos atendidos (ex: Crianças, Adolescentes, Adultos e Idosos)."
+    atendimento = models.TextField(
+        null=True,
+        default="Não informado",
+        help_text="Grupos atendidos (ex: Crianças, Adolescentes, Adultos e Idosos).",
     )
 
     convenio = models.BooleanField(default=False)
 
-    retorno_acompanhamento = models.CharField(default="Não informado",
+    retorno_acompanhamento = models.CharField(
+        default="Não informado",
         max_length=100,
-        blank=True, null=True,
-        help_text="Ex: 'Retorno em até 30 dias'"
+        blank=True,
+        null=True,
+        help_text="Ex: 'Retorno em até 30 dias'",
     )
 
-    experiencia_prescricao = models.CharField(default="Não informado",
+    experiencia_prescricao = models.CharField(
+        default="Não informado",
         max_length=500,
-        blank=True, null=True,
-        help_text="Ex: 'Sim' ou 'Não' ou 'Não informado'"
+        blank=True,
+        null=True,
+        help_text="Ex: 'Sim' ou 'Não' ou 'Não informado'",
     )
 
-    formacao = models.TextField(default="Não informado",
-        blank=True, null=True,
-        help_text="Onde se formou e suas especialidades"
+    formacao = models.TextField(
+        default="Não informado",
+        blank=True,
+        null=True,
+        help_text="Onde se formou e suas especialidades",
     )
 
-    foto = models.ImageField(upload_to='doctors/', blank=True, null=True)
+    foto = models.ImageField(upload_to="doctors/", blank=True, null=True)
 
-    preco_consulta = models.DecimalField(max_digits=8, decimal_places=2, default="00.00")
+    preco_consulta = models.DecimalField(
+        max_digits=8, decimal_places=2, default="00.00"
+    )
 
-    duracao_consulta = models.IntegerField(help_text="Duração da consulta em minutos", default='00')
+    duracao_consulta = models.IntegerField(
+        help_text="Duração da consulta em minutos", default="00"
+    )
 
     def __str__(self):
         return self.nome
-
