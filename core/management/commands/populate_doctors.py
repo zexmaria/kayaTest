@@ -8,10 +8,11 @@ from decimal import Decimal
 
 
 class Command(BaseCommand):
-    help = 'Popula o banco de dados com médicos fictícios'
+
+    help = f'\033[32m❗❗❗Adiciona médicos fictícios ao banco de dados❗❗❗\033[0m'
 
     def add_arguments(self, parser):
-        parser.add_argument('total', type=int, help='Número de médicos a serem criados')
+        parser.add_argument('total', type=int, help='Número de médicos a serem criados e adicionados')
 
     def handle(self, *args, **kwargs):
         total = kwargs['total']
@@ -65,7 +66,6 @@ class Command(BaseCommand):
         ]
 
         for _ in range(total):
-            #Escolhe o valor que vai ser gerado nos campos do banco de dados
             nome = random.choice(nomes)
             especialidade = random.choice(especialidades)
             crm = ''.join(random.choices('0123456789', k=5))
@@ -84,7 +84,6 @@ class Command(BaseCommand):
                 with open(foto_caminho, 'rb') as img_file: # Abre a foto
                     foto_content = ContentFile(img_file.read(), name=foto_nome)
 
-                #Cria instância de Doctor (Dr pronto)
                 doctor = Doctor.objects.create(
                     nome=nome,
                     especialidade=especialidade,
@@ -92,6 +91,13 @@ class Command(BaseCommand):
                     cidade=cidade,
                     estado=estado,
                     visualizacoes=visualizacoes,
+                    descricao='Médica formada pela Unesp Botucatu, com especialização em psicanálise '
+                              'e ênfase no tratamento da dor crônica. Pós-graduada em Cannabis Sativa '
+                              'pela Sbec e certificada internacionalmente em cannabis pela WeCann Academy. '
+                              'Completou a Capacitação em Cannabis Medicinal pela USP-SP e Unicamp.',
+                    patologias='Dor Crônica, Alzheimer, TEA, Depressão, Ansiedade, Insônia, Enxaqueca, '
+                               'Fibromialgia, Parkinson',
+                    atendimento='Crianças, Adolescentes, Adultos e Idosos',
                     foto=foto_content,
                     preco_consulta=valor_escolhido
                 )

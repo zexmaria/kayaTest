@@ -19,7 +19,7 @@ Aqui você encontra um passo a passo para **clonar**, **instalar** e **rodar** o
 ## Pré-requisitos
 
 
-* Python 3.10+
+* Python 3.12+
 * PIP
 * Django 5+
 * Node.js 22.14+
@@ -29,31 +29,26 @@ Aqui você encontra um passo a passo para **clonar**, **instalar** e **rodar** o
 
 ## 🛠️  Instalações necessárias:
 
-### 🐍Python 3.10 ou superior
-Verifique se o Python está instalado.
+### 🐍Python 3.12 ou superior
+1. Verifique se o Python está instalado.
+Em todos os Linux Debian Based, já temos o python3 instalado nativamente.
+2.No terminal execute o comando abaixo:
 
+``` python --version```
 
-No Linux, abra o terminal e digite: 
+Se aparecer Python 3.12 ou maior, você já tem! Se não, baixe o python para seu sistema:
 
-``` python3 --version```
+2. Baixe e instale o Python 3.12:
 
-Se aparecer Python 3.10 ou maior, você já tem! Se não, siga os passos abaixo.
-
-1. Atualize o sistema:
-
-``` sudo apt update && sudo apt upgrade -y ```
-
-2. Instale o Python 3.10:
-
-``` sudo apt install python3.10 -y```
+https://www.python.org/downloads/release/python-3120/
 
 3. Verifique se o PIP está instalado:
 
 ``` pip --version```
 
-Se não estiver instalado, siga os passos abaixo:
+Se não estiver instalado, siga os passos abaixo para baixar e instalar:
 
-``` sudo apt install python3-pip -y```
+https://pypi.org/project/pip/
 
 
 ### 🧩Git
@@ -68,6 +63,7 @@ No terminal digite:
 
 ````sudo apt install git -y````
 
+
 ### ⚙️Node.js
 1. Verifique se o Node.js e o NPM está instalado.
 
@@ -79,21 +75,19 @@ No terminal digite:
 * Caso não apareça nenhuma versão instalada, siga os passos abaixo: 
 
 
-2. Baixe o instalador Node.js 20.x LTS (atual estável em 2025)
+1. Baixe o instalador Node.js 20.x LTS (atual estável em 2025):
 
-No terminal digite:
 
 ````curl -fsSL https://deb.nodesource.com/setup_20.x | sudo -E bash -````
 
 
-3. Instale o Node.js:
+2. Instale o Node.js:
 
-No terminal digite:
 
 ````sudo apt install -y nodejs````
 
 
-4. Verifique se o Node.js e o npm foram instalados:
+3. Verifique se o Node.js e o npm foram instalados:
 
 ````node -v````
 
@@ -132,13 +126,20 @@ Com ambiente virtual ativo, instale as dependências do projeto com o comando ab
 
 ````pip install -r requirements.txt````
 
+### 5.Popule o banco de dados com médicos fictícios
+No Terminal adicione novos médicos ao banco de dados executando o comando:
+
+````python manage.py populate_doctors 10````
+
+OBS: Você pode trocar o numero 10 no comando acima pela quantidade de médicos que deseja adicionar à página.
+
 ### 5. Instale o Tailwindcss v3
 1. Use o comando abaixo para instalar o Tailwind.:
 
 ```` npm install -D tailwindcss@3 ````
 
 
-2. Para ativar o Tailwind, use o comando abaixo:
+2. Ative o Tailwindcss:
 
 
 ````npx tailwindcss -i ./core/static/css/input.css -o ./core/static/css/output.css --watch````
@@ -151,21 +152,19 @@ Com ambiente virtual ativo, instale as dependências do projeto com o comando ab
 
 ```python manage.py runserver```
 
-2. Acesse o localhost pelo browser com o seguinte endereço:
+2. Acesse seu localhost pelo browser pelo o seguinte endereço:
 
 http://127.0.0.1:8000/
 
-3. Para acessar o painel administrativo do Django, crie um superusuário em outro terminal e com o venv ativado, usando o comando:
+3. Para acessar o painel administrativo do Django, crie um superusuário em outro terminal, na pasta do projeto e com o venv ativado, usando o comando:
 
 ````python manage.py createsuperuser````
 
-O terminal irá solicitar que você insira um nome de usuário, endereço de e-mail e senha para o superusuário. Preencha as informações conforme solicitado.
+    O terminal irá solicitar que você insira um nome de usuário, endereço de e-mail e senha para o superusuário. Preencha as informações conforme solicitado.
 
-4. Acesse o painel administrativo do Django com o seguinte endereço:
+4. Acesse o painel administrativo do Django pelo o seguinte endereço:
 
 http://127.0.0.1:8000/admin/
-
-5. Após fazer login como superusuario, cadastre alguns médicos para usar a aplicação com todas suas funcionalidades 
 ***
 
 
