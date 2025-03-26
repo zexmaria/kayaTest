@@ -138,33 +138,35 @@ Com ambiente virtual ativo, instale as dependências do projeto com o comando ab
 
 ***
 ## ⚙️Rodando o Projeto
-1. Execute os seguintes comandos para aplicar as migrações e iniciar o servidor:
+1. Execute aplicar as migrações:
 
 ````python manage.py migrate````
 
-```python manage.py runserver```
 
-
-### 2.Popule o banco de dados com médicos fictícios
-No Terminal adicione novos médicos ao banco de dados executando o comando:
+2. Popule o banco de dados com médicos fictícios executando o comando:
 
 ````python manage.py populate_doctors 10````
 
-OBS: Você pode trocar o numero 10 no comando acima pela quantidade de médicos que deseja adicionar à página.
+OBS: Você pode trocar o numero 10 no comando acima pela quantidade de médicos que deseja adicionar à página/banco de dados.
 
-3. Acesse seu localhost pelo browser pelo o seguinte endereço:
+3. Inicie o servidor local:
+
+```python manage.py runserver```
+
+4. Acesse seu localhost pelo browser pelo o seguinte endereço:
 
 http://127.0.0.1:8000/
 
-3. Para acessar o painel administrativo do Django, crie um superusuário em outro terminal, na pasta do projeto e com o venv ativado, usando o comando:
+5. Para acessar o painel administrativo do Django, crie um superusuário em outro terminal, na pasta do projeto e com o venv ativado, usando o comando:
 
 ````python manage.py createsuperuser````
 
-    O terminal irá solicitar que você insira um nome de usuário, endereço de e-mail e senha para o superusuário. Preencha as informações conforme solicitado.
+O terminal irá solicitar que você insira um nome de usuário, endereço de e-mail e senha para o superusuário. Preencha as informações conforme solicitado.
 
-4. Acesse o painel administrativo do Django pelo o seguinte endereço:
+6. Acesse o painel administrativo do Django pelo o seguinte endereço:
 
 http://127.0.0.1:8000/admin/
+
 ***
 
 
