@@ -7,7 +7,7 @@ class Doctor(models.Model):
     crm = models.CharField(max_length=50)
     cidade = models.CharField(max_length=100)
     estado = models.CharField(max_length=2)
-    visualizacoes = models.IntegerField(default=0) # Coloquei add visualizações manualmente para testar o filtro
+    visualizacoes = models.IntegerField(default=0) # manualmente pra testar o filtro
 
     descricao = models.TextField(
         null=True, default="Não informado", help_text="Descreva a pessoa do médico."

@@ -16,5 +16,5 @@ package-lock.json
 # Tailwind CSS gerado
 core/static/css/output.css
 
-#IDE
+# IDE
 .idea

@@ -1,23 +1,64 @@
-import os
-from django.core.management import call_command
-from django.test import TestCase
-from core.models import Doctor
+import pytest
+from django.urls import reverse
+from django.test import Client
+from .models import Doctor
 
-class TestScriptPopulateDoctors(TestCase):
+@pytest.fixture
+def client():
+    return Client()
 
-    def test_if_5_doctors_are_created(self):
+@pytest.fixture
+def doctor():
+    return Doctor.objects.create(
+        nome="Dr. João Silva",
+        especialidade="Clínico Geral",
+        crm="123456-SP",
+        cidade="São Paulo",
+        estado="SP",
+        visualizacoes=10,
+        descricao="Especialista em medicina canabinoide",
+        patologias="Ansiedade, Depressão",
+        atendimento="Adultos",
+        convenio=True,
+        retorno_acompanhamento="Retorno em até 30 dias",
+        experiencia_prescricao="Sim",
+        formacao="Universidade de São Paulo",
+        preco_consulta=350.00,
+        duracao_consulta=60,
+    )
 
-        call_command('populate_doctors', 5)  # Substitua pelo nome real do comando
-        assert doctor.objects.count(), 5
+def test_doctor_profile_view(client, doctor):
+    url = reverse("core:doctor_profile", args=[doctor.id])
+    response = client.get(url)
+    assert response.status_code == 200
+    assert doctor.nome in response.content.decode()
 
-    def test_if_atributes_is_not_empty(self):
-        # Verifica se os médicos foram criados com os atributos corretos
-        doctor = Doctor.objects.first()
-        #assert Doctor.nome(len) == 1
-        self.assertIsNotNone(doctor.especialidade)
-        self.assertIsNotNone(Doctor.crm)
-        self.assertIsNotNone(Doctor.cidade)
-        self.assertIsNotNone(Doctor.estado)
-        self.assertIsNotNone(Doctor.preco_consulta)
+def test_doctor_list_view(client, doctor):
+    url = reverse("core:index")
+    response = client.get(url)
+    assert response.status_code == 200
+    assert doctor.nome in response.content.decode()
 
+def test_doctor_list_filter_by_especialidade(client, doctor):
+    url = reverse("core:index") + "?especialidade=Clínico Geral"
+    response = client.get(url)
+    assert response.status_code == 200
+    assert doctor.nome in response.content.decode()
 
+def test_doctor_list_order_by_menor_valor(client, doctor):
+    url = reverse("core:index") + "?ordenar=menor_valor"
+    response = client.get(url)
+    assert response.status_code == 200
+    assert doctor.nome in response.content.decode()
+
+def test_doctor_list_order_by_maior_valor(client, doctor):
+    url = reverse("core:index") + "?ordenar=maior_valor"
+    response = client.get(url)
+    assert response.status_code == 200
+    assert doctor.nome in response.content.decode()
+
+def test_doctor_list_order_by_visualizacoes(client, doctor):
+    url = reverse("core:index") + "?ordenar=visualizacoes"
+    response = client.get(url)
+    assert response.status_code == 200
+    assert doctor.nome in response.content.decode()

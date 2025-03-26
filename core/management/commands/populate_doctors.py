@@ -71,6 +71,7 @@ class Command(BaseCommand):
             crm = ''.join(random.choices('0123456789', k=5))
             visualizacoes = random.randint(1, 75)
             foto_nome = random.choice(add_fotos)
+
             foto_caminho = os.path.join(img_folder, foto_nome)
 
             valores=[310.00, 580.00, 420,00,
@@ -81,7 +82,7 @@ class Command(BaseCommand):
             valor_escolhido = Decimal(random.choice(valores))
 
             try:
-                with open(foto_caminho, 'rb') as img_file: # Abre a foto
+                with open(foto_caminho, 'rb') as img_file:
                     foto_content = ContentFile(img_file.read(), name=foto_nome)
 
                 doctor = Doctor.objects.create(

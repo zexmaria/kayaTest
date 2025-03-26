@@ -30,7 +30,6 @@
       <input type="hidden" name="especialidade" value="MEDICINA DO TRABALHO">
       <button type="submit" class="bg-[#CDEA98] hover:bg-[#A7C879] px-4 py-2 rounded-full font-bold text-sm">MEDICINA DO TRABALHO</button>
   </form>
-
 </div>
 
 <div class="flex flex-wrap justify-center gap-2 mt-8">
@@ -64,7 +63,6 @@
   </form>
 </div>
 
-
 <div class="flex flex-wrap justify-center gap-2 mt-8">
     <form method="get" action="">
       <input type="hidden" name="especialidade" value="RADIOLOGIA E DIAGNÓSTICO POR IMAGEM">
@@ -82,14 +80,15 @@
   </form>
 </div>
 
+
+
+
 <div class="flex flex-wrap justify-center gap-2 mt-8">
     <form method="get" action="">
       <input type="hidden" name="especialidade" value="MEDICINA DE FAMÍLIA E COMUNIDADE">
       <button type="submit" class="bg-[#CDEA98] hover:bg-[#A7C879] px-4 py-2 rounded-full font-bold text-sm">MEDICINA DE FAMÍLIA E COMUNIDADE</button>
   </form>
-
 </div>
-
 
 
 
@@ -99,17 +98,18 @@
             rounded-lg drop-shadow-xl md:py-5 md:px-12 md:rounded-full ps-10">
     </div>
 
+
+
     <div class="mb-4 font-bold ml-10 mt-6 pl-12 md:pl-12 text-verdeKaya">
         Total de {{ doctors|length }} prescritores
     </div>
 
 
+
     <p class="font-bold ml-20 flex text-lg mb-3 text-gray-500">Filtros</p>
+
     <div class="ml-10">
         <div class="ml-10">
-
-
-
     <form method="get" action="" class="ml-10 flex flex-wrap gap-2 mt-4">
         {% if especialidade_ativa %}
             <input type="hidden" name="especialidade" value="{{ especialidade_ativa }}">

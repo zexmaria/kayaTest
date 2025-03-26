@@ -1,5 +1,5 @@
 # Projeto Kaya Doc (teste para backend jr)
-***
+
 
 ## 💻 Sobre o Projeto
 ***
@@ -7,7 +7,6 @@
 Este é um projeto feito com Python, Django e Tailwindcss. O projeto é um teste da empresa Kaya onde precisei replicar a página https://kayadoc.com/medicos/ e a página de perfil de algum dos médicos (ex: https://kayadoc.com/medicos/23/perfil/) usando Tailwindcss e Templates do Django para servir essas páginas no localhost.
 
 Aqui você encontra um passo a passo para **clonar**, **instalar** e **rodar** o projeto no seu computador.
-***
 ## Observações iniciais:
 * O site foi desenvolvido baseado na versão **<u>Desktop</u>** e para rodar perfeitamente apenas nesta resolução(1024px). Não é garantido que funcionará bem em resolução diferente (tablet ou mobile).
 
@@ -17,7 +16,7 @@ Aqui você encontra um passo a passo para **clonar**, **instalar** e **rodar** o
 
 ***
 ## Pré-requisitos
-
+***
 
 * Python 3.12+
 * PIP
@@ -126,13 +125,6 @@ Com ambiente virtual ativo, instale as dependências do projeto com o comando ab
 
 ````pip install -r requirements.txt````
 
-### 5.Popule o banco de dados com médicos fictícios
-No Terminal adicione novos médicos ao banco de dados executando o comando:
-
-````python manage.py populate_doctors 10````
-
-OBS: Você pode trocar o numero 10 no comando acima pela quantidade de médicos que deseja adicionar à página.
-
 ### 5. Instale o Tailwindcss v3
 1. Use o comando abaixo para instalar o Tailwind.:
 
@@ -152,7 +144,15 @@ OBS: Você pode trocar o numero 10 no comando acima pela quantidade de médicos 
 
 ```python manage.py runserver```
 
-2. Acesse seu localhost pelo browser pelo o seguinte endereço:
+
+### 2.Popule o banco de dados com médicos fictícios
+No Terminal adicione novos médicos ao banco de dados executando o comando:
+
+````python manage.py populate_doctors 10````
+
+OBS: Você pode trocar o numero 10 no comando acima pela quantidade de médicos que deseja adicionar à página.
+
+3. Acesse seu localhost pelo browser pelo o seguinte endereço:
 
 http://127.0.0.1:8000/
 
