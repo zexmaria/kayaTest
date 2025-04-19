@@ -110,9 +110,9 @@ class Command(BaseCommand):
 
             foto_caminho = os.path.join(img_folder, foto_nome)
 
-            valores=[310.00, 580.00, 420,00,
-                  99.99, 250.00, 200, 00,00,
-                  950.00, 125,00.00, 280,
+            valores=[310.00, 580.00, 01.00,
+                  99.99, 250.00, 200.00,
+                  950.00, 125.00, 280.00,
                   330.00, 540.00, 300.00,
                   ]
             valor_consulta = Decimal(random.choice(valores))
