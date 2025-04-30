@@ -62,7 +62,7 @@ def test_if_doctor_profile_view_return_200(client, doctor):
 
 @pytest.mark.django_db
 def test_if_doctor_profile_view_not_found_return_404(client):
-    url = reverse("core:doctor_profile", args=[999])
+    url = reverse("core:doctor_profile", args=[999999])
     response = client.get(url)
     assert response.status_code == 404
 
