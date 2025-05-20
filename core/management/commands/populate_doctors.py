@@ -8,13 +8,16 @@ from decimal import Decimal
 
 
 class Command(BaseCommand):
-
     help = f'\033[32m❗❗❗Adiciona médicos fictícios ao banco de dados❗❗❗\033[0m'
 
     def add_arguments(self, parser):
         parser.add_argument('total', type=int, help='Número de médicos a serem criados e adicionados')
 
     def handle(self, *args, **kwargs):
+        escolhido_nome = []
+        escolhido_foto =[]
+        count_doctor = 0
+
         total = kwargs['total']
 
         nomes_mulheres = [
@@ -98,6 +101,7 @@ class Command(BaseCommand):
         for _ in range(total):
             todos_nomes = random.choice([nomes_mulheres, nomes_homens])
             nome = random.choice(todos_nomes)
+            escolhido_nome.append(nome)
             if nome in nomes_mulheres:
                 foto_nome = random.choice(add_fotos_mulheres)
             else:
@@ -106,7 +110,6 @@ class Command(BaseCommand):
             especialidade = random.choice(especialidades)
             crm = ''.join(random.choices('0123456789', k=5))
             visualizacoes = random.randint(1, 75)
-
 
             foto_caminho = os.path.join(img_folder, foto_nome)
 
@@ -138,7 +141,11 @@ class Command(BaseCommand):
                     foto=foto_content,
                     preco_consulta=valor_consulta
                 )
-                subprocess.check_call("", shell=True)
                 print(f"\033[32m✅ {doctor.nome} criado(a) com sucesso!\033[0m")
+
+                escolhido_foto.append(doctor.foto)
+                count_doctor += 1
+
             except subprocess.CalledProcessError:
                 print("❌ Erro ao criar usuário(s)")
+x
