@@ -1,0 +1,165 @@
+{% extends "base.html" %}
+
+{% block title %}Encontre seu especialista em cannabis medicinal{% endblock title %}
+
+{% block content %}
+{% load static %}
+
+<h2 class="mb-4 text-2xl font-bold md:text-4xl lg:text-5xl text-verdeKaya text-center mt-48 font-marvinVisions">
+    Encontre seu especialista em cannabis medicinal
+</h2>
+<p class="text-center font-semibold mb-7 md:text-xl">
+    Busque por especialidade, pelo nome do profissional da saúde ou utilize umas das palavras-chave abaixo.
+</p>
+
+
+<div class="flex flex-wrap justify-center gap-2 mt-8">
+  <form method="get" action="">
+      <input type="hidden" name="especialidade" value="">
+      <button type="submit" class="bg-[#CDEA98] hover:bg-[#A7C879] px-4 py-2 rounded-full font-bold text-sm">TODAS</button>
+  </form>
+  <form method="get" action="">
+      <input type="hidden" name="especialidade" value="CLÍNICO GERAL">
+      <button type="submit" class="bg-[#CDEA98] hover:bg-[#A7C879] px-4 py-2 rounded-full font-bold text-sm">CLÍNICO GERAL</button>
+  </form>
+  <form method="get" action="">
+      <input type="hidden" name="especialidade" value="MEDICINA PREVENTIVA E SOCIAL">
+      <button type="submit" class="bg-[#CDEA98] hover:bg-[#A7C879] px-4 py-2 rounded-full font-bold text-sm">MEDICINA PREVENTIVA E SOCIAL</button>
+  </form>
+  <form method="get" action="">
+      <input type="hidden" name="especialidade" value="MEDICINA DO TRABALHO">
+      <button type="submit" class="bg-[#CDEA98] hover:bg-[#A7C879] px-4 py-2 rounded-full font-bold text-sm">MEDICINA DO TRABALHO</button>
+  </form>
+</div>
+
+<div class="flex flex-wrap justify-center gap-2 mt-8">
+  <form method="get" action="">
+      <input type="hidden" name="especialidade" value="MEDICINA DE FAMÍLIA E COMUNIDADE - RQE N: 21312 ">
+      <button type="submit" class="bg-[#CDEA98] hover:bg-[#A7C879] px-4 py-2 rounded-full font-bold text-sm">MEDICINA DE FAMÍLIA E COMUNIDADE - RQE Nº: 21312</button>
+  </form>
+  <form method="get" action="">
+      <input type="hidden" name="especialidade" value="MEDICINA PREVENTIVA E SOCIAL - RQE N: 39217">
+      <button type="submit" class="bg-[#CDEA98] hover:bg-[#A7C879] px-4 py-2 rounded-full font-bold text-sm">MEDICINA PREVENTIVA E SOCIAL - RQE Nº: 39217</button>
+  </form>
+  <form method="get" action="">
+      <input type="hidden" name="especialidade" value="MEDICINA INTEGRATIVA">
+      <button type="submit" class="bg-[#CDEA98] hover:bg-[#A7C879] px-4 py-2 rounded-full font-bold text-sm">MEDICINA INTEGRATIVA</button>
+  </form>
+</div>
+
+<div class="flex flex-wrap justify-center gap-2 mt-8">
+
+  <form method="get" action="">
+      <input type="hidden" name="especialidade" value="PÓS GRADUAÇÃO EM PSIQUIATRIA / MEDICINA CANABINOIDE">
+      <button type="submit" class="bg-[#CDEA98] hover:bg-[#A7C879] px-4 py-2 rounded-full font-bold text-sm">PÓS GRADUAÇÃO EM PSIQUIATRIA / MEDICINA CANABINÓIDE</button>
+  </form>
+  <form method="get" action="">
+      <input type="hidden" name="especialidade" value="DENTISTA">
+      <button type="submit" class="bg-[#CDEA98] hover:bg-[#A7C879] px-4 py-2 rounded-full font-bold text-sm">DENTISTA</button>
+  </form>
+    <form method="get" action="">
+      <input type="hidden" name="especialidade" value="MEDICINA DE FAMÍLIA E COMUNIDADE - RQE N: 6198 ">
+      <button type="submit" class="bg-[#CDEA98] hover:bg-[#A7C879] px-4 py-2 rounded-full font-bold text-sm">MEDICINA DE FAMÍLIA E COMUNIDADE - RQE Nº: 6198</button>
+  </form>
+</div>
+
+<div class="flex flex-wrap justify-center gap-2 mt-8">
+    <form method="get" action="">
+      <input type="hidden" name="especialidade" value="RADIOLOGIA E DIAGNÓSTICO POR IMAGEM">
+      <button type="submit" class="bg-[#CDEA98] hover:bg-[#A7C879] px-4 py-2 rounded-full font-bold text-sm">RADIOLOGIA E DIAGNÓSTICO POR IMAGEM</button>
+  </form>
+
+    <form method="get" action="">
+      <input type="hidden" name="especialidade" value="GENERALISTA MEDICINA ENDOCANABINÓIDE">
+      <button type="submit" class="bg-[#CDEA98] hover:bg-[#A7C879] px-4 py-2 rounded-full font-bold text-sm">GENERALISTA | MEDICINA ENDOCANABINÓIDE</button>
+  </form>
+
+    <form method="get" action="">
+      <input type="hidden" name="especialidade" value="MEDICINA FUNCIONAL INTEGRATIVA">
+      <button type="submit" class="bg-[#CDEA98] hover:bg-[#A7C879] px-4 py-2 rounded-full font-bold text-sm">MEDICINA FUNCIONAL INTEGRATIVA</button>
+  </form>
+</div>
+
+
+
+
+<div class="flex flex-wrap justify-center gap-2 mt-8">
+    <form method="get" action="">
+      <input type="hidden" name="especialidade" value="MEDICINA DE FAMÍLIA E COMUNIDADE">
+      <button type="submit" class="bg-[#CDEA98] hover:bg-[#A7C879] px-4 py-2 rounded-full font-bold text-sm">MEDICINA DE FAMÍLIA E COMUNIDADE</button>
+  </form>
+</div>
+
+
+
+    <div class="w-full maPESx-w-screen-xl mx-auto px-4 md:px-8">
+        <div class="flex flex-wrap justify-center gap-2 mt-8">
+            <input placeholder="Pesquisar" type="text" name="q" class="w-5/6 text-gray-900 bg-gray-50 border-0
+            rounded-lg drop-shadow-xl md:py-5 md:px-12 md:rounded-full ps-10">
+    </div>
+
+
+
+    <div class="mb-4 font-bold ml-10 mt-6 pl-12 md:pl-12 text-verdeKaya">
+        Total de {{ doctors|length }} prescritores
+    </div>
+
+
+
+    <p class="font-bold ml-20 flex text-lg mb-3 text-gray-500">Filtros</p>
+
+    <div class="ml-10">
+        <div class="ml-10">
+    <form method="get" action="" class="ml-10 flex flex-wrap gap-2 mt-4">
+        {% if especialidade_ativa %}
+            <input type="hidden" name="especialidade" value="{{ especialidade_ativa }}">
+        {% endif %}
+        <button type="submit" name="ordenar" value="menor_valor" class="text-gray-500 bg-gray-300 px-4 py-2 rounded-full font-bold text-sm">MENOR VALOR</button>
+        <button type="submit" name="ordenar" value="maior_valor" class="text-gray-500 bg-gray-300 px-4 py-2 rounded-full font-bold text-sm">MAIOR VALOR</button>
+        <button type="submit" name="ordenar" value="visualizacoes" class="text-gray-500 bg-gray-300 px-4 py-2 rounded-full font-bold text-sm">VISUALIZAÇÕES</button>
+    </form>
+
+
+<div class="mt-10 grid grid-cols-1 gap-6 pb-6 mx-6 overflow-x-auto sm:grid-cols-2 md:grid-cols-3 xl:px-9 xl:gap-4 xl:max-w-screen-xl xl:mx-auto">
+    {% for doctor in doctors %}
+    <div class="flex flex-col items-center justify-between w-full mx-auto text-center rounded-lg bg-gray-100/50">
+        <div class="flex flex-col w-full">
+            <a class="w-full mb-4 cursor-pointer" href="{% url 'core:doctor_profile' doctor.id %}">
+                <div class="w-full text-center avatar">
+                    <div class="w-32 mx-auto sm:w-full">
+                        {% if doctor.foto %}
+                            <img class="rounded-lg" src="{{ doctor.foto.url }}" alt="Foto de {{ doctor.nome }}">
+                        {% else %}
+                            <img class="rounded-lg" src="{% static 'img/default_profile.png' %}" alt="Foto padrão">
+                        {% endif %}
+                    </div>
+                </div>
+            </a>
+            <div class="mb-6 text-center sm:px-5 xl:mb-5 sm:text-start">
+                <a href="{% url 'core:doctor_profile' doctor.id %}">
+                    <h3 class="w-full text-lg font-bold whitespace-nowrap">{{ doctor.nome }}</h3>
+                </a>
+                <span class="w-full text-sm italic text-gray-500">{{ doctor.especialidade }}</span>
+            </div>
+        </div>
+        <div class="flex flex-col w-full gap-3 mt-auto text-sm font-bold">
+            <div class="flex gap-2 mt-auto text-base sm:px-5">
+                <div>R$ {{ doctor.preco_consulta|default:"00,00" }}</div>
+                <div>{{ doctor.duracao_consulta|default:"50" }} min</div>
+            </div>
+        </div>
+        <div class="flex flex-col gap-2 py-4">
+            <a class=" w-full px-6 py-2 text-white rounded-lg md:text-xl bg-verdeKaya" href="#">AGENDAR CONSULTA</a>
+        </div>
+        <div class="flex flex-col bg-white">
+            <a class="w-full px-6 py-2 text-verdeKaya rounded-lg md:text-lg bg-white" href="{% url 'core:doctor_profile' doctor.id %}">VER MAIS</a>
+        </div>
+    </div>
+    {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>
+
+
+{% endblock content %}
